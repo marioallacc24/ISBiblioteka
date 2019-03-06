@@ -1,0 +1,169 @@
+﻿<Window x:Class="ISBiblioteka.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        xmlns:local="clr-namespace:ISBiblioteka"
+        mc:Ignorable="d"
+        Title="IS Educons Biblioteka" Height="800" Width="990"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        MinWidth="990" MinHeight="800"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
+    
+    
+    
+    <Grid ShowGridLines="False">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="330*"/>
+            <ColumnDefinition Width="330*"/>
+            <ColumnDefinition Width="330*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="187.5*"/>
+            <RowDefinition Height="187.5*"/>
+            <RowDefinition Height="187.5*"/>
+            <RowDefinition Height="187.5*"/>
+        </Grid.RowDefinitions>
+
+        <materialDesign:ColorZone
+            Grid.ColumnSpan="3"
+  Mode="PrimaryDark"
+  Padding="10"
+  CornerRadius="5"
+  materialDesign:ShadowAssist.ShadowDepth="Depth5"
+  Margin="1">
+
+
+
+            <DockPanel>
+                <materialDesign:PopupBox DockPanel.Dock="Right" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False">
+                    <StackPanel>
+                        <Button Content="Tamna tema"/>
+                        <Button Content="Svetla tema"/>
+                
+                        <Separator/>
+                        <Button Content="Izlaz" Click="MenuPopupButton_OnClick"/>
+                    </StackPanel>
+                </materialDesign:PopupBox>
+                <StackPanel
+      Orientation="Horizontal">
+                    <TextBlock
+        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+        Margin="16 0 0 0" FontSize="25">
+      IS EDUCONS BIBLIOTEKA
+                    </TextBlock>
+                </StackPanel>
+            </DockPanel>
+
+        </materialDesign:ColorZone>
+
+        <Button Grid.Column="0" Grid.Row="1" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto" >
+            <StackPanel>
+                <materialDesign:PackIcon Kind="Book" Width="50" Height="50" HorizontalAlignment="Center"/>
+                <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}">
+                    Dodaj knjigu
+                </TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button Grid.Column="1" Grid.Row="1" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto">
+            <StackPanel>
+                <materialDesign:PackIcon Kind="PersonAddOutline" Width="50" Height="50" HorizontalAlignment="Center"/>
+                <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}">
+                    Dodaj člana
+                </TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button Grid.Column="2" Grid.Row="1" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto">
+            <StackPanel>
+                <materialDesign:PackIcon Kind="AccountStar" Width="50" Height="50" HorizontalAlignment="Center"/>
+                <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}">
+                    Admin panel
+                </TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button Grid.Column="0" Grid.Row="2" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto">
+            <StackPanel>
+                <materialDesign:PackIcon Kind="TableLarge" Width="50" Height="50" HorizontalAlignment="Center"/>
+                <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}">
+                    Knjige
+                </TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button Grid.Column="1" Grid.Row="2" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto">
+            <StackPanel>
+                <materialDesign:PackIcon Kind="TableLarge" Width="50" Height="50" HorizontalAlignment="Center"/>
+                <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}">
+                    Članovi
+                </TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button Grid.Column="2" Grid.Row="2" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto">
+            <StackPanel>
+                <materialDesign:PackIcon Kind="TableLarge" Width="50" Height="50" HorizontalAlignment="Center"/>
+                <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}">
+                    Izdato
+                </TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button Grid.Column="0" Grid.Row="3" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto">
+            <StackPanel>
+                <materialDesign:PackIcon Kind="UPload" Width="50" Height="50" HorizontalAlignment="Center"/>
+                <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}">
+                    Izdavanje
+                </TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button Grid.Column="1" Grid.Row="3" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto">
+            <StackPanel>
+                <materialDesign:PackIcon Kind="Download" Width="50" Height="50" HorizontalAlignment="Center"/>
+                <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}">
+                    Vraćanje
+                </TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button Grid.Column="2" Grid.Row="3" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto">
+            <StackPanel>
+                <materialDesign:PackIcon Kind="HelpOutline" Width="50" Height="50" HorizontalAlignment="Center"/>
+                <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}">
+                    Pomoć
+                </TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button Grid.Column="0" Grid.Row="4"  Margin="15,0,15,15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="151" VerticalAlignment="Bottom">
+            <StackPanel>
+                <materialDesign:PackIcon Kind="SettingsOutline" Width="50" Height="50" HorizontalAlignment="Center"/>
+                <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}">
+                   Podešavanje
+                </TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button Grid.Column="2" Grid.Row="4"  Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto">
+            <StackPanel>
+                <materialDesign:PackIcon Kind="Logout" Width="50" Height="50" HorizontalAlignment="Center"/>
+                <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}">
+                    Izloguj se
+                </TextBlock>
+            </StackPanel>
+        </Button>
+
+    </Grid>
+</Window>
