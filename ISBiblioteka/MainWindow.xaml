@@ -66,7 +66,7 @@
 
         </materialDesign:ColorZone>
 
-        <Button Grid.Column="0" Grid.Row="1" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto" >
+        <Button Grid.Column="0" Grid.Row="1" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto" Click="Button_Click" >
             <StackPanel>
                 <materialDesign:PackIcon Kind="Book" Width="50" Height="50" HorizontalAlignment="Center"/>
                 <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}">
