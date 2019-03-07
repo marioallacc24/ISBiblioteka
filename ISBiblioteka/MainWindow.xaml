@@ -46,7 +46,7 @@
             <DockPanel>
                 <materialDesign:PopupBox DockPanel.Dock="Right" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False">
                     <StackPanel>
-                        <Button Content="Tamna tema"/>
+                        <Button Content="Tamna tema!s"/>
                         <Button Content="Svetla tema"/>
                 
                         <Separator/>
