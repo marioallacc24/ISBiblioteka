@@ -59,7 +59,7 @@
         VerticalAlignment="Center"
                         HorizontalAlignment="Center"
         Margin="16 0 0 0" FontSize="25">
-      IS EDUCONS BIBLIOTEKA
+      IS EDUCONS BIBLIOTEKA!
                     </TextBlock>
                 </StackPanel>
             </DockPanel>
