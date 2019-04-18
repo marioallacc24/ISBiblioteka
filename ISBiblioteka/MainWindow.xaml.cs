@@ -76,5 +76,12 @@ namespace ISBiblioteka
             Pomoc pomoc = new Pomoc();
             pomoc.Show();
         }
+
+        private void Dugme_IzlogujSe_Click(object sender, RoutedEventArgs e)
+        {
+            Login login = new Login();
+            Close();
+            login.ShowDialog();
+        }
     }
 }

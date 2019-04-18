@@ -135,7 +135,7 @@
             </StackPanel>
         </Button>
 
-        <Button x:Name="Dugme_IzlogujSe" Grid.Column="2" Grid.Row="4"  Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto">
+        <Button x:Name="Dugme_IzlogujSe" Grid.Column="2" Grid.Row="4"  Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto" Click="Dugme_IzlogujSe_Click">
             <StackPanel>
                 <materialDesign:PackIcon Kind="Logout" Width="50" Height="50" HorizontalAlignment="Center"/>
                 <TextBlock FontSize="15" Style="{StaticResource MaterialDesignTitleTextBlock}">

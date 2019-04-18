@@ -23,5 +23,17 @@ namespace ISBiblioteka
         {
             InitializeComponent();
         }
+
+        private void Dugme_Login_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            Close();
+            mainWindow.ShowDialog();
+        }
+
+        private void Dugme_Otkazi_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
