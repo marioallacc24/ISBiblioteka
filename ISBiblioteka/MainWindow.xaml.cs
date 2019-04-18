@@ -34,5 +34,47 @@ namespace ISBiblioteka
         {
 
         }
+
+        private void Dugme_DodajKnjigu_Click(object sender, RoutedEventArgs e)
+        {
+            DodajKnjigu dodajKnjigu = new DodajKnjigu();
+            dodajKnjigu.Show();
+        }
+
+        private void Dugme_DodajClana_Click(object sender, RoutedEventArgs e)
+        {
+            DodajClana dodajClana = new DodajClana();
+            dodajClana.Show();
+        }
+
+        private void Dugme_AdminPanel_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Panel je u izradi", "Obaveštenje",MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+
+        private void Dugme_Izdavanje_Click(object sender, RoutedEventArgs e)
+        {
+            Izdavanje izdavanje = new Izdavanje();
+            izdavanje.Show();
+        }
+
+        private void Dugme_Vracanje_Click(object sender, RoutedEventArgs e)
+        {
+            Vracanje vracanje = new Vracanje();
+            vracanje.Show();
+        }
+
+        private void Dugme_Podesavanje_Click(object sender, RoutedEventArgs e)
+        {
+            Podesavanje podesavanje = new Podesavanje();
+            podesavanje.Show();
+
+        }
+
+        private void Dugme_Pomoc_Click(object sender, RoutedEventArgs e)
+        {
+            Pomoc pomoc = new Pomoc();
+            pomoc.Show();
+        }
     }
 }

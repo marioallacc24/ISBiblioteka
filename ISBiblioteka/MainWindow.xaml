@@ -66,7 +66,7 @@
 
         </materialDesign:ColorZone>
 
-        <Button Grid.Column="0" Grid.Row="1" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto" Click="Button_Click" >
+        <Button x:Name="Dugme_DodajKnjigu" Grid.Column="0" Grid.Row="1" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto" Click="Dugme_DodajKnjigu_Click"  >
             <StackPanel>
                 <materialDesign:PackIcon Kind="Book" Width="50" Height="50" HorizontalAlignment="Center"/>
                 <TextBlock FontSize="15" Style="{StaticResource MaterialDesignTitleTextBlock}">
@@ -75,7 +75,7 @@
             </StackPanel>
         </Button>
 
-        <Button Grid.Column="1" Grid.Row="1" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto">
+        <Button x:Name="Dugme_DodajClana" Grid.Column="1" Grid.Row="1" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto" Click="Dugme_DodajClana_Click">
             <StackPanel>
                 <materialDesign:PackIcon Kind="PersonAddOutline" Width="50" Height="50" HorizontalAlignment="Center"/>
                 <TextBlock FontSize="15" Style="{StaticResource MaterialDesignTitleTextBlock}">
@@ -84,7 +84,7 @@
             </StackPanel>
         </Button>
 
-        <Button Grid.Column="2" Grid.Row="1" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto">
+        <Button x:Name="Dugme_AdminPanel" Grid.Column="2" Grid.Row="1" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto" Click="Dugme_AdminPanel_Click">
             <StackPanel>
                 <materialDesign:PackIcon Kind="AccountStar" Width="50" Height="50" HorizontalAlignment="Center"/>
                 <TextBlock FontSize="15" Style="{StaticResource MaterialDesignTitleTextBlock}">
@@ -99,7 +99,7 @@
 
         
 
-        <Button Grid.Column="0" Grid.Row="2" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto">
+        <Button x:Name="Dugme_Izdavanje" Grid.Column="0" Grid.Row="2" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto" Click="Dugme_Izdavanje_Click">
             <StackPanel>
                 <materialDesign:PackIcon Kind="UPload" Width="50" Height="50" HorizontalAlignment="Center"/>
                 <TextBlock FontSize="15" Style="{StaticResource MaterialDesignTitleTextBlock}">
@@ -108,7 +108,7 @@
             </StackPanel>
         </Button>
 
-        <Button Grid.Column="1" Grid.Row="2" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto">
+        <Button x:Name="Dugme_Vracanje" Grid.Column="1" Grid.Row="2" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto" Click="Dugme_Vracanje_Click">
             <StackPanel>
                 <materialDesign:PackIcon Kind="Download" Width="50" Height="50" HorizontalAlignment="Center"/>
                 <TextBlock FontSize="15" Style="{StaticResource MaterialDesignTitleTextBlock}">
@@ -117,7 +117,7 @@
             </StackPanel>
         </Button>
 
-        <Button Grid.Column="0" Grid.Row="4" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto">
+        <Button x:Name="Dugme_Pomoc" Grid.Column="0" Grid.Row="4" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto" Click="Dugme_Pomoc_Click">
             <StackPanel>
                 <materialDesign:PackIcon Kind="HelpOutline" Width="50" Height="50" HorizontalAlignment="Center"/>
                 <TextBlock FontSize="15" Style="{StaticResource MaterialDesignTitleTextBlock}">
@@ -126,7 +126,7 @@
             </StackPanel>
         </Button>
 
-        <Button Grid.Column="2" Grid.Row="2"  Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto" >
+        <Button x:Name="Dugme_Podesavanje" Grid.Column="2" Grid.Row="2"  Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto" Click="Dugme_Podesavanje_Click" >
             <StackPanel>
                 <materialDesign:PackIcon Kind="SettingsOutline" Width="50" Height="50" HorizontalAlignment="Center"/>
                 <TextBlock FontSize="15" Style="{StaticResource MaterialDesignTitleTextBlock}">
@@ -135,7 +135,7 @@
             </StackPanel>
         </Button>
 
-        <Button Grid.Column="2" Grid.Row="4"  Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto">
+        <Button x:Name="Dugme_IzlogujSe" Grid.Column="2" Grid.Row="4"  Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto">
             <StackPanel>
                 <materialDesign:PackIcon Kind="Logout" Width="50" Height="50" HorizontalAlignment="Center"/>
                 <TextBlock FontSize="15" Style="{StaticResource MaterialDesignTitleTextBlock}">
