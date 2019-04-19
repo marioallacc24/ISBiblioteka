@@ -6,7 +6,7 @@
         
         xmlns:local="clr-namespace:ISBiblioteka"
         mc:Ignorable="d"
-        Title="Dodavanje knjige" Height="500" Width="690"
+        Title="Dodavanje knjige" Height="600" Width="690"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -14,9 +14,105 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
-        MinWidth="690" MinHeight="500"
+        MinWidth="690" MinHeight="600"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
-    <Grid>
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="163*"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="127*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="idTextBox" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="ID:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+
+        <TextBox x:Name="isbnTextBox" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="ISBN:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+
+        <TextBox x:Name="nazivTextBox" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="Naziv:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+
+        <TextBox x:Name="autorTextBox" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="Autor:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
         
+        <TextBox x:Name="opisTextBox" Margin="0,5,0,0" Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" FontSize="15" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" materialDesign:HintAssist.Hint="Opis"></TextBox>
+
+        <TextBox x:Name="izdavacTextBox" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="Izdavač:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+        
+        <ComboBox x:Name="kategorijaComoBox" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" FontSize="15" materialDesign:HintAssist.Hint="Kategorija">
+        
+            <ComboBoxItem>
+                Stručna literatura
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Beletristika
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Novine
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Magazini
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Naučni radovi
+            </ComboBoxItem>
+        </ComboBox>
+        
+       <ComboBox x:Name="formatComboBox" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3" FontSize="15" materialDesign:HintAssist.Hint="Format">
+
+            <ComboBoxItem>
+                Papirni
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Elektronski
+            </ComboBoxItem>
+            
+        </ComboBox>
+
+        <ComboBox x:Name="kolicinaComboBox" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3" FontSize="15" materialDesign:HintAssist.Hint="Količina" IsEditable="True">
+
+            <ComboBoxItem>
+                1
+            </ComboBoxItem>
+            <ComboBoxItem>
+                2
+            </ComboBoxItem>
+            <ComboBoxItem>
+                3
+            </ComboBoxItem>
+         
+        </ComboBox>
+        
+        <DatePicker x:Name="datumIzdavanjaDatePicker" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="3" FontSize="15" materialDesign:HintAssist.Hint="Datum Izdavanja" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+
+        <DatePicker x:Name="datumDodavanjaDatePicker" Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="3" FontSize="15" materialDesign:HintAssist.Hint="Datum Dodavanja" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+
+
+
+        <Button Grid.Row="11" Grid.Column="4" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton">
+            SAČUVAJ
+        </Button>
+        <Button x:Name="Dugme_Otkazi" Grid.Row="11" Grid.Column="3" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton" Click="Dugme_Otkazi_Click">
+            OTKAŽI
+        </Button>
+        <Button Grid.Row="11" Grid.Column="1" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton">
+            IZMENA
+        </Button>
+        <Button x:Name="Dugme_Obrisi" Grid.Row="11" Grid.Column="0" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton" Click="Dugme_Obrisi_Click">
+            OBRIŠI
+        </Button>
+
     </Grid>
 </Window>

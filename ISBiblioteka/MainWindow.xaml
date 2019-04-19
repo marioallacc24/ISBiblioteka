@@ -50,7 +50,7 @@
                         <Button x:Name="Dugme_SvetlaTema" Content="Svetla tema" Click="Dugme_SvetlaTema_Click"/>
                 
                         <Separator/>
-                        <Button Content="Izlaz" Click="MenuPopupButton_OnClick"/>
+                        <Button x:Name="Dugme_Izlaz" Content="Izlaz" Click="Dugme_Izlaz_OnClick"/>
                     </StackPanel>
                 </materialDesign:PopupBox>
                 <StackPanel

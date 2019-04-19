@@ -27,7 +27,7 @@ namespace ISBiblioteka
             
         }
 
-        private void MenuPopupButton_OnClick(object sender, RoutedEventArgs e)
+        private void Dugme_Izlaz_OnClick(object sender, RoutedEventArgs e)
         {
             System.Windows.Application.Current.Shutdown();
         }

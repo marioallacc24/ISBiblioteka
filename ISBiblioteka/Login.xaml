@@ -34,7 +34,7 @@
         <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" x:Name="TextBox_Korisnik" materialDesign:HintAssist.Hint="Korisnik" FontSize="15" Margin="10"></TextBox>
         <PasswordBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="PasswordBox" materialDesign:HintAssist.Hint="Password" FontSize="15" Margin="10" />
 
-        <Button x:Name="Dugme_Otkazi" Grid.Column="0" Grid.Row="3" Margin="10" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="" Height="Auto" Click="Dugme_Otkazi_Click"  >
+        <Button x:Name="Dugme_Otkazi" Grid.Column="0" Grid.Row="3" Margin="10" Style="{StaticResource MaterialDesignRaisedLightButton}" ToolTip="" Height="Auto" Click="Dugme_Otkazi_Click"  >
             <StackPanel>
                 <materialDesign:PackIcon Kind="Cancel" Width="25" Height="25" HorizontalAlignment="Center"/>
                 

@@ -24,5 +24,32 @@ namespace ISBiblioteka
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
+
+        public void ResetFields()
+        {
+            idTextBox.Text = "";
+            isbnTextBox.Text = "";
+            nazivTextBox.Text = "";
+            autorTextBox.Text = "";
+            opisTextBox.Text = "";
+            izdavacTextBox.Text = "";
+            kategorijaComoBox.SelectedValue = null;
+            formatComboBox.SelectedValue = null;
+            kolicinaComboBox.SelectedValue = null; 
+            datumIzdavanjaDatePicker.SelectedDate = null;
+            datumDodavanjaDatePicker.SelectedDate = null;
+
+            
+        }
+
+        private void Dugme_Otkazi_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Dugme_Obrisi_Click(object sender, RoutedEventArgs e)
+        {
+            ResetFields();
+        }
     }
 }
