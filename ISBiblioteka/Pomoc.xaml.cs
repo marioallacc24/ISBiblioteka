@@ -22,6 +22,7 @@ namespace ISBiblioteka
         public Pomoc()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
     }
 }

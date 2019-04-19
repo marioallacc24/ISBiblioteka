@@ -22,6 +22,7 @@ namespace ISBiblioteka
         public DodajClana()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
     }
 }

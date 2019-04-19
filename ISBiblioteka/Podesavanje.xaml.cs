@@ -22,6 +22,7 @@ namespace ISBiblioteka
         public Podesavanje()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
     }
 }

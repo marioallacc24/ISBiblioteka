@@ -16,6 +16,7 @@
         Background="{DynamicResource MaterialDesignPaper}"
         MinWidth="300" MinHeight="500"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150*"/>

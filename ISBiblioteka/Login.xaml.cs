@@ -22,6 +22,7 @@ namespace ISBiblioteka
         public Login()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
         private void Dugme_Login_Click(object sender, RoutedEventArgs e)
@@ -29,11 +30,13 @@ namespace ISBiblioteka
             MainWindow mainWindow = new MainWindow();
             Close();
             mainWindow.ShowDialog();
+            
+            
         }
 
         private void Dugme_Otkazi_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            System.Windows.Application.Current.Shutdown();
         }
     }
 }

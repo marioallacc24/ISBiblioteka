@@ -23,11 +23,13 @@ namespace ISBiblioteka
         public MainWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+            
         }
 
         private void MenuPopupButton_OnClick(object sender, RoutedEventArgs e)
         {
-            Close();
+            System.Windows.Application.Current.Shutdown();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

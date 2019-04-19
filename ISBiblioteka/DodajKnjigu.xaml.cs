@@ -22,6 +22,7 @@ namespace ISBiblioteka
         public DodajKnjigu()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
     }
 }
