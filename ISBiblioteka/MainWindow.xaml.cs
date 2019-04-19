@@ -40,6 +40,9 @@ namespace ISBiblioteka
         private void Dugme_DodajKnjigu_Click(object sender, RoutedEventArgs e)
         {
             DodajKnjigu dodajKnjigu = new DodajKnjigu();
+            dodajKnjigu.WindowStartupLocation = System.Windows.WindowStartupLocation.Manual;
+            dodajKnjigu.Left = Left + 60;
+            dodajKnjigu.Top = Top + 60;
             dodajKnjigu.Show();
         }
 
