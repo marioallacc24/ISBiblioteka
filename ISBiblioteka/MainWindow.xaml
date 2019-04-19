@@ -46,8 +46,8 @@
             <DockPanel>
                 <materialDesign:PopupBox DockPanel.Dock="Right" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Height="24" RenderTransformOrigin="0.529,0.067">
                     <StackPanel>
-                        <Button Content="Tamna tema"/>
-                        <Button Content="Svetla tema"/>
+                        <Button x:Name="Dugme_TamnaTema" Content="Tamna tema" Click="Dugme_TamnaTema_Click"/>
+                        <Button x:Name="Dugme_SvetlaTema" Content="Svetla tema" Click="Dugme_SvetlaTema_Click"/>
                 
                         <Separator/>
                         <Button Content="Izlaz" Click="MenuPopupButton_OnClick"/>
