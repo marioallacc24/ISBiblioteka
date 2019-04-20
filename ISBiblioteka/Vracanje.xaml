@@ -6,7 +6,7 @@
         
         xmlns:local="clr-namespace:ISBiblioteka"
         mc:Ignorable="d"
-        Title="Vraćanje" Height="500" Width="690"
+        Title="Vraćanje" Height="500" Width="850"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -14,9 +14,74 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
-        MinWidth="690" MinHeight="500"
+        MinWidth="850" MinHeight="500"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
     <Grid>
-        
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="163*"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="127*"/>
+        </Grid.RowDefinitions>
+
+        <ListView Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="11" ItemsSource="{Binding Items1}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding Code}"
+                        Header="ID Zaduženja" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding Code}"
+                        Header="ID Člana" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding Name}"
+                        Header="Naziv" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding Description}"
+                        Header="Ime" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding Description}"
+                        Header="Prezime" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding Description}"
+                        Header="Student" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding Description}"
+                        Header="Količina" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding Description}"
+                        Header="Datum zaduženja" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding Description}"
+                        Header="Datum razduženja" />
+                    
+                 
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Button Grid.Row="11" Grid.Column="4" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton">
+            Vrati
+        </Button>
+        <Button x:Name="Dugme_Otkazi" Grid.Row="11" Grid.Column="3" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton" Click="Dugme_Otkazi_Click">
+            OTKAŽI
+        </Button>
+
     </Grid>
 </Window>
