@@ -24,5 +24,20 @@ namespace ISBiblioteka
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
+
+        private void Dugme_GitHub_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/marioallacc24/ISBiblioteka");
+        }
+
+        private void Dugme_Sajt_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://educons.edu.rs/");
+        }
+
+        private void Dugme_Linkedin_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://linkedin.com/in/mario-blagojevic-455256158");
+        }
     }
 }
