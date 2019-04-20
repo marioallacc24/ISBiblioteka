@@ -85,12 +85,7 @@
         <Button x:Name="Dugme_Otkazi" Grid.Row="11" Grid.Column="3" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton" Click="Dugme_Otkazi_Click">
             OTKAŽI
         </Button>
-        <Button Grid.Row="11" Grid.Column="1" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton">
-            IZMENA
-        </Button>
-        <Button x:Name="Dugme_Obrisi" Grid.Row="11" Grid.Column="0" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton" >
-            OBRIŠI
-        </Button>
+        
 
     </Grid>
 </Window>
