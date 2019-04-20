@@ -24,5 +24,10 @@ namespace ISBiblioteka
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
+
+        private void Dugme_Otkazi_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

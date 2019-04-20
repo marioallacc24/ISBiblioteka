@@ -6,7 +6,7 @@
         
         xmlns:local="clr-namespace:ISBiblioteka"
         mc:Ignorable="d"
-        Title="Izdavanje" Height="500" Width="690"
+        Title="Izdavanje" Height="500" Width="900"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -14,9 +14,83 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
-        MinWidth="690" MinHeight="500"
+        MinWidth="900" MinHeight="500"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="163*"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="127*"/>
+        </Grid.RowDefinitions>
+
+        <ListView Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="11" ItemsSource="{Binding Items1}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding Code}"
+                        Header="ID" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding Name}"
+                        Header="ISBN" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding Description}"
+                        Header="Naziv" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding Description}"
+                        Header="Autor" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding Description}"
+                        Header="Opis" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding Description}"
+                        Header="Izdavač" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding Description}"
+                        Header="Kategorija" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding Description}"
+                        Header="Format" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding Description}"
+                        Header="Količina" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding Description}"
+                        Header="Datum Izdavanja" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding Description}"
+                        Header="Datum Dodavanja" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Button Grid.Row="11" Grid.Column="4" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton">
+            IZDAJ
+        </Button>
+        <Button x:Name="Dugme_Otkazi" Grid.Row="11" Grid.Column="3" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton" Click="Dugme_Otkazi_Click">
+            OTKAŽI
+        </Button>
+        <Button Grid.Row="11" Grid.Column="1" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton">
+            IZMENA
+        </Button>
+        <Button x:Name="Dugme_Obrisi" Grid.Row="11" Grid.Column="0" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton" >
+            OBRIŠI
+        </Button>
+
     </Grid>
 </Window>
