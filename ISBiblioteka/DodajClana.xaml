@@ -6,7 +6,7 @@
         
         xmlns:local="clr-namespace:ISBiblioteka"
         mc:Ignorable="d"
-        Title="Dodavanje člana" Height="500" Width="690"
+        Title="Dodavanje člana" Height="600" Width="690"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -14,9 +14,93 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
-        MinWidth="690" MinHeight="500"
+        MinWidth="690" MinHeight="600"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="163*"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="127*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="idClanTextBox" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="ID:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+
+        <TextBox x:Name="imeTextBox" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="Ime:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+
+        <TextBox x:Name="prezimeTextBox" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="Prezime:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+
+        <TextBox x:Name="emailTextBox" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="Email:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+
+        <TextBox x:Name="brojTelefonaTextBox" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="Broj telefona:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+
+        <TextBox x:Name="jmbgTextBox" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="Jmbg:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+
+        <CheckBox x:Name="studentJeClanCheckBox" IsChecked="True" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" FontSize="15" >
+                    Clan je student
+                </CheckBox>
+
+        <TextBox x:Name="brojIndeksaTextBox" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="Broj indeksa:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" IsEnabled="{Binding Path=IsChecked, ElementName=studentJeClanCheckBox}"></TextBox>
+
+        <ComboBox x:Name="fakultetComoBox" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3" FontSize="15" materialDesign:HintAssist.Hint="Fakultet" IsEnabled="{Binding Path=IsChecked, ElementName=studentJeClanCheckBox}">
+
+            <ComboBoxItem>
+                Informacione tehnologije
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Poslovna ekonomija
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Primenjena bezbednost
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Zaštita životne sredine
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Klasično slikarstvo
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Digitalna produkcija
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Učiteljski fakultet
+            </ComboBoxItem>
+        </ComboBox>
+
+        <DatePicker x:Name="godinaUpisaDatePicker" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="3" FontSize="15" materialDesign:HintAssist.Hint="Godina upisa" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" IsEnabled="{Binding Path=IsChecked, ElementName=studentJeClanCheckBox}" />
+
+        <DatePicker x:Name="datumUclanjivanjaDatePicker" Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="3" FontSize="15" materialDesign:HintAssist.Hint="Datum Učlanjivanja" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+
+        <Button Grid.Row="11" Grid.Column="4" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton">
+            SAČUVAJ
+        </Button>
+        <Button x:Name="Dugme_Otkazi" Grid.Row="11" Grid.Column="3" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton" Click="Dugme_Otkazi_Click">
+            OTKAŽI
+        </Button>
+        <Button Grid.Row="11" Grid.Column="1" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton">
+            IZMENA
+        </Button>
+        <Button x:Name="Dugme_Obrisi" Grid.Row="11" Grid.Column="0" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton" Click="Dugme_Obrisi_Click">
+            OBRIŠI
+        </Button>
+
+
+
+
     </Grid>
 </Window>
