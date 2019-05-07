@@ -86,7 +86,7 @@
 
         <DatePicker x:Name="datumUclanjivanjaDatePicker" Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="3" FontSize="15" materialDesign:HintAssist.Hint="Datum Učlanjivanja" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
 
-        <Button Grid.Row="11" Grid.Column="4" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Sačuvaj">
+        <Button x:Name="Dugme_Sacuvaj" Grid.Row="11" Grid.Column="4" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Sačuvaj" Click="Dugme_Sacuvaj_Click">
             SAČUVAJ
         </Button>
         <Button x:Name="Dugme_Otkazi" Grid.Row="11" Grid.Column="3" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Otkaži" Click="Dugme_Otkazi_Click">

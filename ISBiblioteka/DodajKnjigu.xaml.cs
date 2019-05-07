@@ -56,122 +56,141 @@ namespace ISBiblioteka
         public bool TestPolja()
         {
             bool verifikacija = true;
-            
+
+            bool verifikacija1 = false;
+            bool verifikacija2 = false;
+            bool verifikacija3 = false;
+            bool verifikacija4 = false;
+            bool verifikacija5 = false;
+            bool verifikacija6 = false;
+            bool verifikacija7 = false;
+            bool verifikacija8 = false;
+            bool verifikacija9 = false;
+            bool verifikacija10 = false;
+            bool verifikacija11 = false;
+
             if (string.IsNullOrWhiteSpace(idTextBox.Text) || System.Text.RegularExpressions.Regex.IsMatch(idTextBox.Text, "[^0-9]"))
             {
                 idTextBox.Background = Brushes.Red;
-                verifikacija = false;
+                verifikacija1 = false;
             } else
             {
                 idTextBox.Background = null;
-                verifikacija = true;
+                verifikacija1 = true;
             }
 
             if (string.IsNullOrWhiteSpace(isbnTextBox.Text) || System.Text.RegularExpressions.Regex.IsMatch(isbnTextBox.Text, "[^0-9]"))
             {
                 isbnTextBox.Background = Brushes.Red;
-                verifikacija = false;
+                verifikacija2 = false;
             } else
             {
                 isbnTextBox.Background = null;
-                verifikacija = true;
+                verifikacija2 = true;
             }
 
             if (string.IsNullOrWhiteSpace(nazivTextBox.Text))
             {
                 nazivTextBox.Background = Brushes.Red;
-                verifikacija = false;
+                verifikacija3 = false;
             } else
             {
                 nazivTextBox.Background = null;
-                verifikacija = true;
+                verifikacija3 = true;
             }
 
             if (string.IsNullOrWhiteSpace(autorTextBox.Text))
             {
                 autorTextBox.Background = Brushes.Red;
-                verifikacija = false;
+                verifikacija4 = false;
             } else
             {
                 autorTextBox.Background = null;
-                verifikacija = true;
+                verifikacija4 = true;
             }
 
             if (string.IsNullOrWhiteSpace(opisTextBox.Text))
             {
                 opisTextBox.Background = Brushes.Red;
-                verifikacija = false;
+                verifikacija5 = false;
             }
             else
             {
                 opisTextBox.Background = null;
-                verifikacija = true;
+                verifikacija5 = true;
             }
 
             if (string.IsNullOrWhiteSpace(izdavacTextBox.Text))
             {
                 izdavacTextBox.Background = Brushes.Red;
-                verifikacija = false;
+                verifikacija6 = false;
             }
             else
             {
                 izdavacTextBox.Background = null;
-                verifikacija = true;
+                verifikacija6 = true;
             }
 
             if (string.IsNullOrEmpty(kategorijaComoBox.Text))
             {
                 kategorijaComoBox.Background = Brushes.Red;
-                verifikacija = false;
+                verifikacija7 = false;
             }else
             {
                 kategorijaComoBox.Background = null;
-                verifikacija = true;
+                verifikacija7 = true;
             }
 
             if (string.IsNullOrEmpty(formatComboBox.Text))
             {
                 formatComboBox.Background = Brushes.Red;
-                verifikacija = false;
+                verifikacija8 = false;
             }
             else
             {
                 formatComboBox.Background = null;
-                verifikacija = true;
+                verifikacija8 = true;
             }
             if (string.IsNullOrEmpty(kolicinaComboBox.Text) || System.Text.RegularExpressions.Regex.IsMatch(kolicinaComboBox.Text, "[^0-9]"))
             {
                 kolicinaComboBox.Background = Brushes.Red;
-                verifikacija = false;
+                verifikacija9 = false;
             }
             else
             {
                 kolicinaComboBox.Background = null;
-                verifikacija = true;
+                verifikacija9 = true;
             }
             if (string.IsNullOrEmpty(datumDodavanjaDatePicker.Text))
             {
                 datumDodavanjaDatePicker.Background = Brushes.Red;
-                verifikacija = false;
+                verifikacija10 = false;
             }
             else
             {
                 datumDodavanjaDatePicker.Background = null;
-                verifikacija = true;
+                verifikacija10 = true;
             }
             if (string.IsNullOrEmpty(datumIzdavanjaDatePicker.Text))
             {
                 datumIzdavanjaDatePicker.Background = Brushes.Red;
-                verifikacija = false;
+                verifikacija11 = false;
             }
             else
             {
                 datumIzdavanjaDatePicker.Background = null;
-                verifikacija = true;
+                verifikacija11 = true;
             }
 
 
-            return verifikacija;
+            if (verifikacija1 && verifikacija2 && verifikacija3 && verifikacija4 && verifikacija5 && verifikacija6 && verifikacija7 && verifikacija8 && verifikacija9 && verifikacija10)
+            {
+                return verifikacija = true;
+            }
+            else
+            {
+                return verifikacija = false;
+            }
         }
 
         private void Dugme_Otkazi_Click(object sender, RoutedEventArgs e)
