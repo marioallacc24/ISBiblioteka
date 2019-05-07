@@ -43,18 +43,18 @@ namespace ISBiblioteka
         }
         public bool TestPolja()
         {
-            bool verifikacija = false;
+            bool verifikacija = true;
 
-            bool verifikacija1 = false;
-            bool verifikacija2 = false;
-            bool verifikacija3 = false;
-            bool verifikacija4 = false;
-            bool verifikacija5 = false;
-            bool verifikacija6 = false;
-            bool verifikacija7 = false;
-            bool verifikacija8 = false;
-            bool verifikacija9 = false;
-            bool verifikacija10 = false;
+            bool verifikacija1 = true;
+            bool verifikacija2 = true;
+            bool verifikacija3 = true;
+            bool verifikacija4 = true;
+            bool verifikacija5 = true;
+            bool verifikacija6 = true;
+            bool verifikacija7 = true;
+            bool verifikacija8 = true;
+            bool verifikacija9 = true;
+            bool verifikacija10 = true;
 
             if (string.IsNullOrWhiteSpace(idClanTextBox.Text) || System.Text.RegularExpressions.Regex.IsMatch(idClanTextBox.Text, "[^0-9]"))
             {
@@ -163,14 +163,36 @@ namespace ISBiblioteka
                 datumUclanjivanjaDatePicker.Background = null;
                 verifikacija10 = true;
             }
-           
-            if(verifikacija1 && verifikacija2 && verifikacija3 && verifikacija4 && verifikacija5 && verifikacija6 && verifikacija7 && verifikacija8 && verifikacija9 && verifikacija10)
+
+            
+
+            if ((bool)studentJeClanCheckBox.IsChecked)
             {
-                return verifikacija = true;
+                if (verifikacija1 && verifikacija2 && verifikacija3 && verifikacija4 && verifikacija5 && verifikacija6 && verifikacija7 && verifikacija8 && verifikacija9 && verifikacija10)
+                {
+                    return verifikacija = true;
+                }
+                else
+                {
+                    return verifikacija = false;
+                }
             } else
             {
-                return verifikacija = false;
+                brojIndeksaTextBox.Background = null;
+                fakultetComoBox.Background = null;
+                godinaUpisaDatePicker.Background = null;
+
+                if (verifikacija1 && verifikacija2 && verifikacija3 && verifikacija4 && verifikacija5 && verifikacija6 && verifikacija10)
+                {
+                    return verifikacija = true;
+                }
+                else
+                {
+                    return verifikacija = false;
+                }
             }
+           
+            
 
             
         }
