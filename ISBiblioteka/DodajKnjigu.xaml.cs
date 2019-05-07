@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -203,6 +204,19 @@ namespace ISBiblioteka
             if (TestPolja())
             {
                 MessageBox.Show("Polja su pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                Knjiga knjiga = new Knjiga(int.Parse(idTextBox.Text), isbnTextBox.Text, nazivTextBox.Text, autorTextBox.Text, opisTextBox.Text, kategorijaComoBox.Text, izdavacTextBox.Text, formatComboBox.Text, int.Parse(kolicinaComboBox.Text), datumIzdavanjaDatePicker.Text, datumDodavanjaDatePicker.Text);
+                SqlDataAccess sql = new SqlDataAccess();
+
+
+                if (sql.CuvanjeKnjige(knjiga))
+                {
+                    MessageBox.Show("Polja su uspesno dodata", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Polja nisu dodata", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
             else
             {

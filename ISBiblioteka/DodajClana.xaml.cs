@@ -209,6 +209,8 @@ namespace ISBiblioteka
                 MessageBox.Show("Polja nisu pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Error);
                 
             }
+            
+
         }
 
         private void Dugme_Otkazi_Click(object sender, RoutedEventArgs e)

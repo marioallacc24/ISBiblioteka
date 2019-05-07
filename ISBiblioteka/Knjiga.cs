@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ISBiblioteka
 {
-    class Knjiga
+    public class Knjiga
     {
         private int id;
         private string isbn;
