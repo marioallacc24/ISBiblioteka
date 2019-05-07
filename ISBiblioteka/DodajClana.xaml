@@ -86,16 +86,16 @@
 
         <DatePicker x:Name="datumUclanjivanjaDatePicker" Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="3" FontSize="15" materialDesign:HintAssist.Hint="Datum Učlanjivanja" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
 
-        <Button Grid.Row="11" Grid.Column="4" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton">
+        <Button Grid.Row="11" Grid.Column="4" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Sačuvaj">
             SAČUVAJ
         </Button>
-        <Button x:Name="Dugme_Otkazi" Grid.Row="11" Grid.Column="3" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton" Click="Dugme_Otkazi_Click">
+        <Button x:Name="Dugme_Otkazi" Grid.Row="11" Grid.Column="3" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Otkaži" Click="Dugme_Otkazi_Click">
             OTKAŽI
         </Button>
-        <Button Grid.Row="11" Grid.Column="1" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton">
+        <Button Grid.Row="11" Grid.Column="1" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Izmena člana">
             IZMENA
         </Button>
-        <Button x:Name="Dugme_Obrisi" Grid.Row="11" Grid.Column="0" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton" Click="Dugme_Obrisi_Click">
+        <Button x:Name="Dugme_Obrisi" Grid.Row="11" Grid.Column="0" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Obriši polja" Click="Dugme_Obrisi_Click">
             OBRIŠI
         </Button>
 

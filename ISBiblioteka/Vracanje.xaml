@@ -76,10 +76,10 @@
             </ListView.View>
         </ListView>
 
-        <Button Grid.Row="11" Grid.Column="4" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton">
+        <Button Grid.Row="11" Grid.Column="4" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Vrati">
             Vrati
         </Button>
-        <Button x:Name="Dugme_Otkazi" Grid.Row="11" Grid.Column="3" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Resource name: MaterialDesignRaisedAccentButton" Click="Dugme_Otkazi_Click">
+        <Button x:Name="Dugme_Otkazi" Grid.Row="11" Grid.Column="3" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Otkaži" Click="Dugme_Otkazi_Click">
             OTKAŽI
         </Button>
 
