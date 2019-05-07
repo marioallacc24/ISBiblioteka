@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.SQLite;
+using System.Data;
 
 namespace ISBiblioteka
 {
@@ -27,16 +29,55 @@ namespace ISBiblioteka
 
         private void Dugme_Login_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
-            Close();
-            mainWindow.ShowDialog();
             
-            
+
+            SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=db_ISBiblioteka.db;Version=3;");
+            if (m_dbConnection.State == ConnectionState.Closed)
+                m_dbConnection.Open();
+
+            try
+            {
+
+
+                String query = "select count(1) from bibliotekar where user=@korisnik and pass=@sifra";
+                SQLiteCommand cmd = new SQLiteCommand(query, m_dbConnection);
+                
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("@korisnik", TextBox_Korisnik.Text);
+                cmd.Parameters.AddWithValue("@sifra", PasswordBox.Password);
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+
+                if (count == 1)
+                {
+                    MainWindow mainWindow = new MainWindow();
+                    Close();
+                    mainWindow.ShowDialog();
+
+                }
+                else
+                {
+                    MessageBox.Show("Pogresni podatci", "Greska", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                m_dbConnection.Close();
+            }
+
         }
+
 
         private void Dugme_Otkazi_Click(object sender, RoutedEventArgs e)
         {
             System.Windows.Application.Current.Shutdown();
         }
+
     }
+
+        
+    
 }
