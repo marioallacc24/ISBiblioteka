@@ -8,19 +8,29 @@ namespace ISBiblioteka
 {
     class Knjiga
     {
-        public int id;
-        public string isbn;
-        public string naziv;
-        public string autor;
-        public string opis;
-        public string kategorija;
-        public string izdavac;
-        public string format;
-        public int kolicina;
-        public string datumDodavanja;
-        public string datumIzdavanja;
-        
+        private int id;
+        private string isbn;
+        private string naziv;
+        private string autor;
+        private string opis;
+        private string kategorija;
+        private string izdavac;
+        private string format;
+        private int kolicina;
+        private string datumDodavanja;
+        private string datumIzdavanja;
 
+        public int Id { get => id; set => id = value; }
+        public string Isbn { get => isbn; set => isbn = value; }
+        public string Naziv { get => naziv; set => naziv = value; }
+        public string Autor { get => autor; set => autor = value; }
+        public string Opis { get => opis; set => opis = value; }
+        public string Kategorija { get => kategorija; set => kategorija = value; }
+        public string Izdavac { get => izdavac; set => izdavac = value; }
+        public string Format { get => format; set => format = value; }
+        public int Kolicina { get => kolicina; set => kolicina = value; }
+        public string DatumDodavanja { get => datumDodavanja; set => datumDodavanja = value; }
+        public string DatumIzdavanja { get => datumIzdavanja; set => datumIzdavanja = value; }
 
         public Knjiga()
         {
@@ -29,17 +39,18 @@ namespace ISBiblioteka
 
         public Knjiga(int id,string isbn,string naziv, string autor, string opis, string kategorija, string izdavac, string format, int kolicina, string datumIzdavanja, string datumDodavanja)
         {
-            this.id = id;
-            this.isbn = isbn;
-            this.naziv = naziv;
-            this.autor = autor;
-            this.opis = opis;
-            this.kategorija = kategorija;
-            this.izdavac = izdavac;
-            this.format = format;
-            this.kolicina = kolicina;
-            this.datumDodavanja = datumDodavanja;
-            this.datumIzdavanja = datumIzdavanja;
+            this.Id = id;
+            this.Isbn = isbn;
+            this.Naziv = naziv;
+            this.Autor = autor;
+            this.Opis = opis;
+            this.Kategorija = kategorija;
+            this.Izdavac = izdavac;
+            this.Format = format;
+            this.Kolicina = kolicina;
+            this.DatumDodavanja = datumDodavanja;
+            this.DatumIzdavanja = datumIzdavanja;
         }
+        
     }
 }
