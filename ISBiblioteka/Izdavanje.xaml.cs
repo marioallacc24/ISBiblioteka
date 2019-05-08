@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,11 +25,35 @@ namespace ISBiblioteka
         {
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+            UcitajKnjige();
+            
+            
         }
 
         private void Dugme_Otkazi_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void Dugme_Izdaj_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void UcitajKnjige()
+        {
+            
+            SQLiteConnection sql_con = new SQLiteConnection("Data Source=db_ISBiblioteka.db;Version=3;");   //podesavanje konekcije
+            sql_con.Open(); //otvaranje kenekcije
+            SQLiteCommand sql_cmd = sql_con.CreateCommand();    //podesavanje komandnog objekta na konekciju
+            sql_cmd.CommandText = "SELECT * FROM knjiga"; //u komandni objekat saljemo sql zahtev
+            SQLiteDataAdapter DB = new SQLiteDataAdapter(sql_cmd.CommandText, sql_con); //sql adapter db izvrsava komandnu odnonso u sebi cuva rezultate sql zahteva (ucitao sve podatke u sebe)
+            sql_con.Close();    //zatavaramo konekciju
+            DataSet DS = new DataSet();     //kreiramo objekta data set koji ce da cuva poadtke iz data dabtera
+            DB.Fill(DS);    //dataset punimo podacima iz adaptera
+
+
+            izdavanjeListView.ItemsSource = DS.Tables[0].DefaultView;   //data set podatke ispisujemo u listview
         }
     }
 }

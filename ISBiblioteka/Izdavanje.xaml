@@ -14,7 +14,7 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
-        MinWidth="900" MinHeight="500"
+        MinWidth="1350" MinHeight="500"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -39,47 +39,47 @@
             <RowDefinition Height="127*"/>
         </Grid.RowDefinitions>
 
-        <ListView Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="11" ItemsSource="{Binding Items1}">
+        <ListView x:Name="izdavanjeListView" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="11">
             <ListView.View>
                 <GridView>
                     <GridViewColumn
-                        DisplayMemberBinding="{Binding Code}"
+                        DisplayMemberBinding="{Binding id}"
                         Header="ID" />
                     <GridViewColumn
-                        DisplayMemberBinding="{Binding Name}"
+                        DisplayMemberBinding="{Binding isbn}"
                         Header="ISBN" />
                     <GridViewColumn
-                        DisplayMemberBinding="{Binding Description}"
+                        DisplayMemberBinding="{Binding naziv}"
                         Header="Naziv" />
                     <GridViewColumn
-                        DisplayMemberBinding="{Binding Description}"
+                        DisplayMemberBinding="{Binding autor}"
                         Header="Autor" />
                     <GridViewColumn
-                        DisplayMemberBinding="{Binding Description}"
+                        DisplayMemberBinding="{Binding opis}"
                         Header="Opis" />
                     <GridViewColumn
-                        DisplayMemberBinding="{Binding Description}"
+                        DisplayMemberBinding="{Binding izdavac}"
                         Header="Izdavač" />
                     <GridViewColumn
-                        DisplayMemberBinding="{Binding Description}"
+                        DisplayMemberBinding="{Binding kategorija}"
                         Header="Kategorija" />
                     <GridViewColumn
-                        DisplayMemberBinding="{Binding Description}"
+                        DisplayMemberBinding="{Binding format}"
                         Header="Format" />
                     <GridViewColumn
-                        DisplayMemberBinding="{Binding Description}"
+                        DisplayMemberBinding="{Binding kolicina}"
                         Header="Količina" />
                     <GridViewColumn
-                        DisplayMemberBinding="{Binding Description}"
+                        DisplayMemberBinding="{Binding datumIzdavanja}"
                         Header="Datum Izdavanja" />
                     <GridViewColumn
-                        DisplayMemberBinding="{Binding Description}"
+                        DisplayMemberBinding="{Binding datumDodavanja}"
                         Header="Datum Dodavanja" />
                 </GridView>
             </ListView.View>
         </ListView>
 
-        <Button Grid.Row="11" Grid.Column="4" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Izdaj">
+        <Button x:Name="Dugme_Izdaj" Grid.Row="11" Grid.Column="4" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Izdaj" Click="Dugme_Izdaj_Click">
             IZDAJ
         </Button>
         <Button x:Name="Dugme_Otkazi" Grid.Row="11" Grid.Column="3" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Otkaži" Click="Dugme_Otkazi_Click">

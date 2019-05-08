@@ -41,7 +41,7 @@
             </StackPanel>
         </Button>
 
-        <Button x:Name="Dugme_Login" Grid.Column="1" Grid.Row="3" Margin="10" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Uloguj se" Height="Auto" Click="Dugme_Login_Click"  >
+        <Button x:Name="Dugme_Login" Grid.Column="1" Grid.Row="3" Margin="10" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Uloguj se" Height="Auto" Click="Dugme_Login_Click" KeyDown="Dugme_Login_Click"  >
             <StackPanel>
                 <materialDesign:PackIcon Kind="Approve" Width="25" Height="25" HorizontalAlignment="Center"/>
 
