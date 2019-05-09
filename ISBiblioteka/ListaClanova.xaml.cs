@@ -50,7 +50,14 @@ namespace ISBiblioteka
 
         private void Dugme_Obrisi_Click(object sender, RoutedEventArgs e)
         {
+            BrisanjeClana brisanjeClana = new BrisanjeClana();
+            brisanjeClana.ShowDialog();
 
+        }
+
+        private void Dugme_Osvezi_Click(object sender, RoutedEventArgs e)
+        {
+            UcitajClanove();
         }
     }
 }
