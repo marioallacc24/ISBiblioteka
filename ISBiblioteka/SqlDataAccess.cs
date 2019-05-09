@@ -51,5 +51,37 @@ namespace ISBiblioteka
             }
 
         }
+
+        public bool CuvanjeClana(Clan clan)
+        {
+            SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=db_ISBiblioteka.db;Version=3;");
+            if (m_dbConnection.State == ConnectionState.Closed)
+                m_dbConnection.Open();
+
+            try
+            {
+
+
+                String query = "insert into clan(id,ime,prezime,email,brojTelefona,jmbg,jeStudent,brIndeksa,fakultet,godinaUpisa,datumUclanjivanja)values('" + clan.Id + "','" + clan.Ime + "','" + clan.Prezime + "','" + clan.Email + "','" + clan.BrojTelefona + "','" + clan.Jmbg + "','" + clan.JeStudent + "','" + clan.BrojIndeksa + "','" + clan.Fakultet + "','" + clan.GodinaUpisa + "','" + clan.DatumUclanjivanja + "')";
+                SQLiteCommand cmd = new SQLiteCommand(query, m_dbConnection);
+                cmd.ExecuteNonQuery();
+                return true;
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                m_dbConnection.Close();
+            }
+
+        }
     }
 }

@@ -34,7 +34,7 @@
         <Button x:Name="Dugme_GitHub" Grid.Row="0" Grid.Column="1" Style="{StaticResource MaterialDesignRaisedButton}"  Width="100"  ToolTip="Pomoć na Gitu" Click="Dugme_GitHub_Click">
             GitHub
         </Button>
-        <Button x:Name="Dugme_Linkedin" Grid.Row="1" Grid.Column="1" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Educons Linkdin" Click="Dugme_Linkedin_Click">
+        <Button x:Name="Dugme_Linkedin" Grid.Row="1" Grid.Column="1" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Linkdin" Click="Dugme_Linkedin_Click">
             Linkedin
         </Button>
         <Button x:Name="Dugme_Sajt" Grid.Row="2" Grid.Column="1" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Educons sajt" Click="Dugme_Sajt_Click">
