@@ -34,18 +34,12 @@
         <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" x:Name="TextBox_Korisnik" materialDesign:HintAssist.Hint="Korisnik" FontSize="15" Margin="10"></TextBox>
         <PasswordBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="PasswordBox" materialDesign:HintAssist.Hint="Password" FontSize="15" Margin="10" />
 
-        <Button x:Name="Dugme_Otkazi" Grid.Column="0" Grid.Row="3" Margin="10" Style="{StaticResource MaterialDesignRaisedLightButton}" ToolTip="Otkaži" Height="Auto" Click="Dugme_Otkazi_Click"  >
-            <StackPanel>
-                <materialDesign:PackIcon Kind="Cancel" Width="25" Height="25" HorizontalAlignment="Center"/>
-                
-            </StackPanel>
+        <Button x:Name="Dugme_Otkazi" Grid.Column="0" Grid.Row="3" Margin="10" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="120"  ToolTip="Otkaži" Height="35" Click="Dugme_Otkazi_Click"  >
+            OTKAŽI
         </Button>
 
-        <Button x:Name="Dugme_Login" Grid.Column="1" Grid.Row="3" Margin="10" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Uloguj se" Height="Auto" Click="Dugme_Login_Click" KeyDown="Dugme_Login_Click"  >
-            <StackPanel>
-                <materialDesign:PackIcon Kind="Approve" Width="25" Height="25" HorizontalAlignment="Center"/>
-
-            </StackPanel>
+        <Button x:Name="Dugme_Login" Grid.Column="1" Grid.Row="3" Margin="10" Style="{StaticResource MaterialDesignRaisedButton}" Width="120"  ToolTip="Uloguj se" Height="35" Click="Dugme_Login_Click" KeyDown="Dugme_Login_Click"  >
+            ULOGUJ SE
         </Button>
 
 

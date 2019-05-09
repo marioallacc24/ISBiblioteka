@@ -26,8 +26,8 @@ namespace ISBiblioteka
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             UcitajKnjige();
-            
-            
+
+
         }
 
         private void Dugme_Otkazi_Click(object sender, RoutedEventArgs e)
@@ -54,6 +54,18 @@ namespace ISBiblioteka
 
 
             izdavanjeListView.ItemsSource = DS.Tables[0].DefaultView;   //data set podatke ispisujemo u listview
+        }
+
+        private void Dugme_Obrisi_Click(object sender, RoutedEventArgs e)
+        {
+            BrisanjeKnjige brisanjeKnjige = new BrisanjeKnjige();
+            brisanjeKnjige.ShowDialog();
+        }
+
+        private void Dugme_Osvezi_Click(object sender, RoutedEventArgs e)
+        {
+            UcitajKnjige();
+
         }
     }
 }

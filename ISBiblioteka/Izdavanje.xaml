@@ -79,6 +79,13 @@
             </ListView.View>
         </ListView>
 
+        <Button x:Name="Dugme_Obrisi" Grid.Row="11" Grid.Column="0" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Brisanje knjige" Click="Dugme_Obrisi_Click" >
+            OBRIŠI
+        </Button>
+        <Button x:Name="Dugme_Osvezi" Grid.Row="11" Grid.Column="1" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Osvežavanje liste" Click="Dugme_Osvezi_Click">
+            OSVEŽI
+        </Button>
+        
         <Button x:Name="Dugme_Izdaj" Grid.Row="11" Grid.Column="4" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Izdaj" Click="Dugme_Izdaj_Click">
             IZDAJ
         </Button>

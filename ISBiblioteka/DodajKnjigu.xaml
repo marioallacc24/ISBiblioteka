@@ -39,19 +39,19 @@
             <RowDefinition Height="127*"/>
         </Grid.RowDefinitions>
 
-        <TextBox x:Name="idTextBox" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="ID:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+        <TextBox x:Name="idTextBox" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" materialDesign:HintAssist.Hint="ID:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
 
-        <TextBox x:Name="isbnTextBox" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="ISBN:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+        <TextBox x:Name="isbnTextBox" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" materialDesign:HintAssist.Hint="ISBN:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
 
-        <TextBox x:Name="nazivTextBox" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="Naziv:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+        <TextBox x:Name="nazivTextBox" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" materialDesign:HintAssist.Hint="Naziv:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
 
-        <TextBox x:Name="autorTextBox" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="Autor:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
-        
-        <TextBox x:Name="opisTextBox" Margin="0,5,0,0" Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" FontSize="15" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" materialDesign:HintAssist.Hint="Opis"></TextBox>
+        <TextBox x:Name="autorTextBox" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" materialDesign:HintAssist.Hint="Autor:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
 
-        <TextBox x:Name="izdavacTextBox" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="Izdavač:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
-        
-        <ComboBox x:Name="kategorijaComoBox" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" FontSize="15" materialDesign:HintAssist.Hint="Kategorija">
+        <TextBox x:Name="opisTextBox" Margin="15,0,15,0" Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="5" FontSize="15" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" materialDesign:HintAssist.Hint="Opis"></TextBox>
+
+        <TextBox x:Name="izdavacTextBox" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" materialDesign:HintAssist.Hint="Izdavač:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+
+        <ComboBox x:Name="kategorijaComoBox" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" FontSize="15" materialDesign:HintAssist.Hint="Kategorija">
         
             <ComboBoxItem>
                 Stručna literatura
@@ -69,8 +69,8 @@
                 Naučni radovi
             </ComboBoxItem>
         </ComboBox>
-        
-       <ComboBox x:Name="formatComboBox" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3" FontSize="15" materialDesign:HintAssist.Hint="Format">
+
+        <ComboBox x:Name="formatComboBox" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" FontSize="15" materialDesign:HintAssist.Hint="Format">
 
             <ComboBoxItem>
                 Papirni
@@ -81,7 +81,7 @@
             
         </ComboBox>
 
-        <ComboBox x:Name="kolicinaComboBox" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3" FontSize="15" materialDesign:HintAssist.Hint="Količina" IsEditable="True">
+        <ComboBox x:Name="kolicinaComboBox" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" FontSize="15" materialDesign:HintAssist.Hint="Količina" IsEditable="True">
 
             <ComboBoxItem>
                 1
@@ -94,17 +94,17 @@
             </ComboBoxItem>
          
         </ComboBox>
-        
-        <DatePicker x:Name="datumIzdavanjaDatePicker" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="3" FontSize="15" materialDesign:HintAssist.Hint="Datum Izdavanja" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
 
-        <DatePicker x:Name="datumDodavanjaDatePicker" Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="3" FontSize="15" materialDesign:HintAssist.Hint="Datum Dodavanja" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+        <DatePicker x:Name="datumIzdavanjaDatePicker" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" FontSize="15" materialDesign:HintAssist.Hint="Datum Izdavanja" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+
+        <DatePicker x:Name="datumDodavanjaDatePicker" Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" FontSize="15" materialDesign:HintAssist.Hint="Datum Dodavanja" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
 
 
 
         <Button x:Name="Dugme_Sacuvaj" Grid.Row="11" Grid.Column="4" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Sačuvaj" Click="Dugme_Sacuvaj_Click">
             SAČUVAJ
         </Button>
-        <Button x:Name="Dugme_Otkazi" Grid.Row="11" Grid.Column="3" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Otkaži" Click="Dugme_Otkazi_Click">
+        <Button x:Name="Dugme_Otkazi" Grid.Row="11" Grid.Column="3" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100"  ToolTip="Otkaži" Click="Dugme_Otkazi_Click">
             OTKAŽI
         </Button>
         <Button Grid.Row="11" Grid.Column="1" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Izmena knjige">

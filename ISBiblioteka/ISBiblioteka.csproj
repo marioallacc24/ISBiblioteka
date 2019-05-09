@@ -118,6 +118,9 @@
     <Compile Include="BrisanjeClana.xaml.cs">
       <DependentUpon>BrisanjeClana.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BrisanjeKnjige.xaml.cs">
+      <DependentUpon>BrisanjeKnjige.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Clan.cs" />
     <Compile Include="Knjiga.cs" />
     <Compile Include="ListaClanova.xaml.cs">
@@ -137,6 +140,10 @@
       <DependentUpon>Vracanje.xaml</DependentUpon>
     </Compile>
     <Page Include="BrisanjeClana.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BrisanjeKnjige.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

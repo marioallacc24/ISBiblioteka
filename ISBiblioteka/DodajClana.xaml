@@ -39,25 +39,25 @@
             <RowDefinition Height="127*"/>
         </Grid.RowDefinitions>
 
-        <TextBox x:Name="idClanTextBox" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="ID:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+        <TextBox x:Name="idClanTextBox" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" materialDesign:HintAssist.Hint="ID:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
 
-        <TextBox x:Name="imeTextBox" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="Ime:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+        <TextBox x:Name="imeTextBox" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" materialDesign:HintAssist.Hint="Ime:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
 
-        <TextBox x:Name="prezimeTextBox" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="Prezime:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+        <TextBox x:Name="prezimeTextBox" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" materialDesign:HintAssist.Hint="Prezime:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
 
-        <TextBox x:Name="emailTextBox" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="Email:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+        <TextBox x:Name="emailTextBox" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" materialDesign:HintAssist.Hint="Email:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
 
-        <TextBox x:Name="brojTelefonaTextBox" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="Broj telefona:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+        <TextBox x:Name="brojTelefonaTextBox" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" materialDesign:HintAssist.Hint="Broj telefona:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
 
-        <TextBox x:Name="jmbgTextBox" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="Jmbg:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+        <TextBox x:Name="jmbgTextBox" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" materialDesign:HintAssist.Hint="Jmbg:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
 
-        <CheckBox x:Name="studentJeClanCheckBox" IsChecked="True" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" FontSize="15" >
+        <CheckBox x:Name="studentJeClanCheckBox" IsChecked="True" Grid.Row="6" Grid.Column="0" Margin="15,0,15,0" Grid.ColumnSpan="5" FontSize="15" >
                     Clan je student
                 </CheckBox>
 
-        <TextBox x:Name="brojIndeksaTextBox" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3" materialDesign:HintAssist.Hint="Broj indeksa:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" IsEnabled="{Binding Path=IsChecked, ElementName=studentJeClanCheckBox}"></TextBox>
+        <TextBox x:Name="brojIndeksaTextBox" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" materialDesign:HintAssist.Hint="Broj indeksa:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" IsEnabled="{Binding Path=IsChecked, ElementName=studentJeClanCheckBox}"></TextBox>
 
-        <ComboBox x:Name="fakultetComoBox" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3" FontSize="15" materialDesign:HintAssist.Hint="Fakultet" IsEnabled="{Binding Path=IsChecked, ElementName=studentJeClanCheckBox}">
+        <ComboBox x:Name="fakultetComoBox" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" FontSize="15" materialDesign:HintAssist.Hint="Fakultet" IsEnabled="{Binding Path=IsChecked, ElementName=studentJeClanCheckBox}">
 
             <ComboBoxItem>
                 Informacione tehnologije
@@ -82,9 +82,9 @@
             </ComboBoxItem>
         </ComboBox>
 
-        <DatePicker x:Name="godinaUpisaDatePicker" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="3" FontSize="15" materialDesign:HintAssist.Hint="Godina upisa" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" IsEnabled="{Binding Path=IsChecked, ElementName=studentJeClanCheckBox}" />
+        <DatePicker x:Name="godinaUpisaDatePicker" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" FontSize="15" materialDesign:HintAssist.Hint="Godina upisa" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" IsEnabled="{Binding Path=IsChecked, ElementName=studentJeClanCheckBox}" />
 
-        <DatePicker x:Name="datumUclanjivanjaDatePicker" Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="3" FontSize="15" materialDesign:HintAssist.Hint="Datum Učlanjivanja" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+        <DatePicker x:Name="datumUclanjivanjaDatePicker" Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" FontSize="15" materialDesign:HintAssist.Hint="Datum Učlanjivanja" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
 
         <Button x:Name="Dugme_Sacuvaj" Grid.Row="11" Grid.Column="4" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Sačuvaj" Click="Dugme_Sacuvaj_Click">
             SAČUVAJ
