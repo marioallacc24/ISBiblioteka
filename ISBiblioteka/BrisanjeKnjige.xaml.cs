@@ -22,6 +22,7 @@ namespace ISBiblioteka
         public BrisanjeKnjige()
         {
             InitializeComponent();
+
         }
 
         private bool TestPolja()
