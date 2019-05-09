@@ -6,7 +6,7 @@
         
         xmlns:local="clr-namespace:ISBiblioteka"
         mc:Ignorable="d"
-        Title="Izdavanje" Height="500" Width="900"
+        Title="Izdavanje" Height="500" Width="1350"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -14,7 +14,7 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
-        MinWidth="1350" MinHeight="500"
+        MinWidth="700" MinHeight="500"
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
     <Grid>
         <Grid.ColumnDefinitions>

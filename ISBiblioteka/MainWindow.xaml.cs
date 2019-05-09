@@ -69,10 +69,10 @@ namespace ISBiblioteka
             vracanje.Show();
         }
 
-        private void Dugme_Podesavanje_Click(object sender, RoutedEventArgs e)
+        private void Dugme_ListaClanova_Click(object sender, RoutedEventArgs e)
         {
-            Podesavanje podesavanje = new Podesavanje();
-            podesavanje.Show();
+            ListaClanova listaClanova = new ListaClanova();
+            listaClanova.Show();
 
         }
 

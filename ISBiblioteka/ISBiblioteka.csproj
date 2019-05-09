@@ -117,6 +117,9 @@
     </ApplicationDefinition>
     <Compile Include="Clan.cs" />
     <Compile Include="Knjiga.cs" />
+    <Compile Include="ListaClanova.xaml.cs">
+      <DependentUpon>ListaClanova.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -139,6 +142,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Izdavanje.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListaClanova.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -126,11 +126,11 @@
             </StackPanel>
         </Button>
 
-        <Button x:Name="Dugme_Podesavanje" Grid.Column="2" Grid.Row="2"  Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="U izradi" Height="Auto" Click="Dugme_Podesavanje_Click" >
+        <Button x:Name="Dugme_ListaClanova" Grid.Column="2" Grid.Row="2"  Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Lista" Height="Auto" Click="Dugme_ListaClanova_Click" >
             <StackPanel>
-                <materialDesign:PackIcon Kind="SettingsOutline" Width="50" Height="50" HorizontalAlignment="Center"/>
+                <materialDesign:PackIcon Kind="Table" Width="50" Height="50" HorizontalAlignment="Center"/>
                 <TextBlock FontSize="15" Style="{StaticResource MaterialDesignTitleTextBlock}">
-                   Podešavanje
+                   Lista članova
                 </TextBlock>
             </StackPanel>
         </Button>
