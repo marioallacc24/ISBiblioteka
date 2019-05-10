@@ -94,7 +94,7 @@ namespace ISBiblioteka
             {
 
 
-                String query = "insert into clan(id,ime,prezime,email,brojTelefona,jmbg,jeStudent,brIndeksa,fakultet,godinaUpisa,datumUclanjivanja)values('" + clan.Id + "','" + clan.Ime + "','" + clan.Prezime + "','" + clan.Email + "','" + clan.BrojTelefona + "','" + clan.Jmbg + "','" + clan.JeStudent + "','" + clan.BrojIndeksa + "','" + clan.Fakultet + "','" + clan.GodinaUpisa + "','" + clan.DatumUclanjivanja + "')";
+                String query = "insert into clan(id,ime,prezime,email,brojTelefona,jmbg,jeStudent,brIndeksa,fakultet,godinaUpisa,datumUclanjivanja,dugovanja)values('" + clan.Id + "','" + clan.Ime + "','" + clan.Prezime + "','" + clan.Email + "','" + clan.BrojTelefona + "','" + clan.Jmbg + "','" + clan.JeStudent + "','" + clan.BrojIndeksa + "','" + clan.Fakultet + "','" + clan.GodinaUpisa + "','" + clan.DatumUclanjivanja + "','" + clan.Dugovanje + "')";
                 SQLiteCommand cmd = new SQLiteCommand(query, m_dbConnection);
                 cmd.ExecuteNonQuery();
                 return true;

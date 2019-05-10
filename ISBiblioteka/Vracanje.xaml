@@ -48,10 +48,14 @@
                         Header="ID Zaduženja" />
                     <GridViewColumn
                         DisplayMemberBinding="{Binding Code}"
-                        Header="ID Člana" />
+                        Header="ID Knjige" />
                     <GridViewColumn
                         DisplayMemberBinding="{Binding Name}"
                         Header="Naziv" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding Code}"
+                        Header="ID Člana" />
+                    
                     <GridViewColumn
                         DisplayMemberBinding="{Binding Description}"
                         Header="Ime" />

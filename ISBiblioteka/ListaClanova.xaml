@@ -77,7 +77,10 @@
                         <GridViewColumn
                         DisplayMemberBinding="{Binding godinaUpisa}"
                         Header="Godina Upisa" />
-                        <GridViewColumn
+                     <GridViewColumn
+                        DisplayMemberBinding="{Binding dugovanja}"
+                        Header="Duguje knjigu" />
+                    <GridViewColumn
                         DisplayMemberBinding="{Binding datumUclanjivanja}"
                         Header="Datum Uclanjivanja" />
                     </GridView>

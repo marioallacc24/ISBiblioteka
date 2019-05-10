@@ -20,6 +20,7 @@ namespace ISBiblioteka
         private string fakultet;
         private string godinaUpisa;
         private string datumUclanjivanja;
+        private bool dugovanje;
 
         public int Id { get => id; set => id = value; }
         public string Ime { get => ime; set => ime = value; }
@@ -32,6 +33,7 @@ namespace ISBiblioteka
         public string Fakultet { get => fakultet; set => fakultet = value; }
         public string GodinaUpisa { get => godinaUpisa; set => godinaUpisa = value; }
         public string DatumUclanjivanja { get => datumUclanjivanja; set => datumUclanjivanja = value; }
+        public bool Dugovanje { get => dugovanje; set => dugovanje = value; }
 
         public Clan() {
         }
@@ -48,6 +50,7 @@ namespace ISBiblioteka
             Fakultet = fakultet;
             GodinaUpisa = godinaUpisa;
             DatumUclanjivanja = datumUclanjivanja;
+            Dugovanje = false;
         }
     }
 }
