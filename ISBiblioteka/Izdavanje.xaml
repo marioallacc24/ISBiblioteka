@@ -67,7 +67,7 @@
                         DisplayMemberBinding="{Binding kolicina}"
                         Header="Broj kopija" />
                     <GridViewColumn
-                        DisplayMemberBinding="{Binding datumDodavanja}"
+                        DisplayMemberBinding="{Binding dostupno}"
                         Header="Dostupno" />
                     <GridViewColumn
                         Width="100"
@@ -75,7 +75,7 @@
                         Header="Opis" />
                     <GridViewColumn
                         DisplayMemberBinding="{Binding datumIzdavanja}"
-                        Header="Datum Izdavanja" />
+                        Header="Datum štampe" />
                     
                 </GridView>
             </ListView.View>

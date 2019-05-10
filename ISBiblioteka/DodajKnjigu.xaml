@@ -107,7 +107,7 @@
          
         </ComboBox>
 
-        <DatePicker x:Name="datumIzdavanjaDatePicker" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" FontSize="15" materialDesign:HintAssist.Hint="Datum Izdavanja" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+        <DatePicker x:Name="datumIzdavanjaDatePicker" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" FontSize="15" materialDesign:HintAssist.Hint="Datum Štampanja" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
 
         <DatePicker x:Name="datumDodavanjaDatePicker" Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" FontSize="15" materialDesign:HintAssist.Hint="Datum Dodavanja" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
 

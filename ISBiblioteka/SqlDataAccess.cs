@@ -28,7 +28,7 @@ namespace ISBiblioteka
             {
 
 
-                String query = "insert into knjiga(id,isbn,naziv,autor,opis,kategorija,izdavac,format,kolicina,datumDodavanja,datumIzdavanja)values('" + knjiga.Id + "','" + knjiga.Isbn + "','" + knjiga.Naziv + "','" + knjiga.Autor + "','" + knjiga.Opis + "','" + knjiga.Kategorija + "','" + knjiga.Izdavac + "','" + knjiga.Format + "','" + knjiga.Kolicina + "','" + knjiga.DatumDodavanja + "','" + knjiga.DatumIzdavanja + "')";
+                String query = "insert into knjiga(id,isbn,naziv,autor,opis,kategorija,izdavac,format,kolicina,datumDodavanja,datumIzdavanja,dostupno)values('" + knjiga.Id + "','" + knjiga.Isbn + "','" + knjiga.Naziv + "','" + knjiga.Autor + "','" + knjiga.Opis + "','" + knjiga.Kategorija + "','" + knjiga.Izdavac + "','" + knjiga.Format + "','" + knjiga.Kolicina + "','" + knjiga.DatumDodavanja + "','" + knjiga.DatumIzdavanja + "','" + knjiga.Kolicina + "')";
                 SQLiteCommand cmd = new SQLiteCommand(query, m_dbConnection);
                 cmd.ExecuteNonQuery();
                 return true;
