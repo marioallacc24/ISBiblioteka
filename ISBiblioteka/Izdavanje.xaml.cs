@@ -37,6 +37,8 @@ namespace ISBiblioteka
 
         private void Dugme_Izdaj_Click(object sender, RoutedEventArgs e)
         {
+            IzdavanjeKnjiga izdavanjeKnjiga = new IzdavanjeKnjiga();
+            izdavanjeKnjiga.Show();
             
         }
 

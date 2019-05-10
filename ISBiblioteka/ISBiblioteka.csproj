@@ -94,6 +94,7 @@
     <Reference Include="System.Data.SQLite.Linq, Version=1.0.110.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.SQLite.Linq.1.0.110.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\System.Windows.Interactivity.dll</HintPath>
     </Reference>
@@ -122,6 +123,9 @@
       <DependentUpon>BrisanjeKnjige.xaml</DependentUpon>
     </Compile>
     <Compile Include="Clan.cs" />
+    <Compile Include="IzdavanjeKnjiga.xaml.cs">
+      <DependentUpon>IzdavanjeKnjiga.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Knjiga.cs" />
     <Compile Include="ListaClanova.xaml.cs">
       <DependentUpon>ListaClanova.xaml</DependentUpon>
@@ -156,6 +160,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Izdavanje.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IzdavanjeKnjiga.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -224,6 +232,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="resursi\iselektroservis.chm" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

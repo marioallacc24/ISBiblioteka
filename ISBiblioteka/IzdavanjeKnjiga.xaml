@@ -1,0 +1,50 @@
+﻿<Window x:Class="ISBiblioteka.IzdavanjeKnjiga"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ISBiblioteka"
+        mc:Ignorable="d"
+        Title="Izdavanje knjige" Height="200" Width="300"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="7"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        MinWidth="400" MinHeight="500"
+        WindowStartupLocation="CenterScreen"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="200*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="114"/>
+            <RowDefinition Height="114"/>
+            <RowDefinition Height="114"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="55"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="idZaduzenjaTextBox" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" Margin="10" materialDesign:HintAssist.Hint="ID zaduženja:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" ToolTip="Unesite ID zaduženja"></TextBox>
+
+        <TextBox x:Name="idKnjigeTextBox" Grid.Row="1" Grid.Column="0"  VerticalAlignment="Center" Margin="10" materialDesign:HintAssist.Hint="ID knjige:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" ToolTip="Unesite ID knjige" ></TextBox>
+
+        <TextBox x:Name="idClanaTextBox" Grid.Row="1" Grid.Column="1"  VerticalAlignment="Center" Margin="10" materialDesign:HintAssist.Hint="ID člana:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" ToolTip="Unesite ID člana" ></TextBox>
+
+        <DatePicker x:Name="datumIzdavanjaDatePicker" Grid.Row="2" Grid.Column="0"  Margin="10" VerticalAlignment="Center" FontSize="15" materialDesign:HintAssist.Hint="Datum Izdavanja" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+
+        <DatePicker x:Name="datumRazduženjaDatePicker" Grid.Row="2" Grid.Column="1"  Margin="10" VerticalAlignment="Center" FontSize="15" materialDesign:HintAssist.Hint="Datum Razduženja" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+
+        <Button x:Name="Dugme_Potvrdi" Grid.Row="4" Grid.Column="1"  Margin="48,12,48,11" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Izdavanje knjige" Click="Dugme_Potvrdi_Click"  >
+            POTVRDI
+        </Button>
+        <Button x:Name="Dugme_Otkazi" Grid.Row="4" Grid.Column="0"  Margin="48,12,48,11" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Otkaži" Click="Dugme_Otkazi_Click" >
+            OTKAŽI
+        </Button>
+
+    </Grid>
+</Window>
