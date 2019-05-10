@@ -39,5 +39,10 @@ namespace ISBiblioteka
         {
             System.Diagnostics.Process.Start("https://linkedin.com/in/mario-blagojevic-455256158");
         }
+
+        private void Dugme_O_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
