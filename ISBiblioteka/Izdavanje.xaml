@@ -55,26 +55,28 @@
                         DisplayMemberBinding="{Binding autor}"
                         Header="Autor" />
                     <GridViewColumn
-                        DisplayMemberBinding="{Binding opis}"
-                        Header="Opis" />
-                    <GridViewColumn
-                        DisplayMemberBinding="{Binding izdavac}"
-                        Header="Izdavač" />
-                    <GridViewColumn
                         DisplayMemberBinding="{Binding kategorija}"
                         Header="Kategorija" />
                     <GridViewColumn
                         DisplayMemberBinding="{Binding format}"
                         Header="Format" />
                     <GridViewColumn
+                        DisplayMemberBinding="{Binding izdavac}"
+                        Header="Izdavač" />
+                    <GridViewColumn
                         DisplayMemberBinding="{Binding kolicina}"
-                        Header="Količina" />
+                        Header="Broj kopija" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding datumDodavanja}"
+                        Header="Dostupno" />
+                    <GridViewColumn
+                        Width="100"
+                        DisplayMemberBinding="{Binding opis}"
+                        Header="Opis" />
                     <GridViewColumn
                         DisplayMemberBinding="{Binding datumIzdavanja}"
                         Header="Datum Izdavanja" />
-                    <GridViewColumn
-                        DisplayMemberBinding="{Binding datumDodavanja}"
-                        Header="Datum Dodavanja" />
+                    
                 </GridView>
             </ListView.View>
         </ListView>
