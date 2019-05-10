@@ -176,5 +176,36 @@ namespace ISBiblioteka
                 m_dbConnection.Close();
             }
         }
+
+        public bool PromenaDugovanja(int id)
+        {
+            SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=db_ISBiblioteka.db;Version=3;");
+            if (m_dbConnection.State == ConnectionState.Closed)
+                m_dbConnection.Open();
+
+            try
+            {
+
+                String query = "UPDATE clan SET dugovanja = 'True' where id=(" + id + ")";
+                SQLiteCommand cmd = new SQLiteCommand(query, m_dbConnection);
+                cmd.ExecuteNonQuery();
+                return true;
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                m_dbConnection.Close();
+            }
+
+        }
     }
 }
