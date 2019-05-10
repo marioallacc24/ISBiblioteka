@@ -51,7 +51,11 @@
 
         <TextBox x:Name="izdavacTextBox" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" materialDesign:HintAssist.Hint="Izdavač:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
 
-        <ComboBox x:Name="kategorijaComoBox" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" FontSize="15" materialDesign:HintAssist.Hint="Kategorija">
+        <TextBlock Grid.Column="0" Grid.Row="6" Style="{StaticResource MaterialDesignSubheadingTextBlock}" VerticalAlignment="Center" Margin="15,0,15,0">
+        Kategorija:
+        </TextBlock>
+
+        <ComboBox x:Name="kategorijaComoBox" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="4" Margin="15,0,15,0" FontSize="15" >
         
             <ComboBoxItem>
                 Stručna literatura
@@ -70,7 +74,11 @@
             </ComboBoxItem>
         </ComboBox>
 
-        <ComboBox x:Name="formatComboBox" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" FontSize="15" materialDesign:HintAssist.Hint="Format">
+        <TextBlock Grid.Column="0" Grid.Row="7" Style="{StaticResource MaterialDesignSubheadingTextBlock}" VerticalAlignment="Center" Margin="15,0,15,0">
+        Format:
+        </TextBlock>
+
+        <ComboBox x:Name="formatComboBox" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="4" Margin="15,0,15,0" FontSize="15" >
 
             <ComboBoxItem>
                 Papirni
@@ -81,7 +89,11 @@
             
         </ComboBox>
 
-        <ComboBox x:Name="kolicinaComboBox" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="5" Margin="15,0,15,0" FontSize="15" materialDesign:HintAssist.Hint="Količina" IsEditable="True">
+        <TextBlock Grid.Column="0" Grid.Row="8" Style="{StaticResource MaterialDesignSubheadingTextBlock}" VerticalAlignment="Center" Margin="15,0,15,0">
+        Broj kopija:
+        </TextBlock>
+
+        <ComboBox x:Name="kolicinaComboBox" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="4" Margin="15,0,15,0" FontSize="15"  IsEditable="True">
 
             <ComboBoxItem>
                 1
