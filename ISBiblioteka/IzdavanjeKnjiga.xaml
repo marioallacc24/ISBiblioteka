@@ -37,7 +37,7 @@
 
         <DatePicker x:Name="datumIzdavanjaDatePicker" Grid.Row="2" Grid.Column="0"  Margin="10" VerticalAlignment="Center" FontSize="15" materialDesign:HintAssist.Hint="Datum Izdavanja" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
 
-        <DatePicker x:Name="datumRazduženjaDatePicker" Grid.Row="2" Grid.Column="1"  Margin="10" VerticalAlignment="Center" FontSize="15" materialDesign:HintAssist.Hint="Datum Razduženja" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+        <DatePicker x:Name="datumRazduzenjaDatePicker" Grid.Row="2" Grid.Column="1"  Margin="10" VerticalAlignment="Center" FontSize="15" materialDesign:HintAssist.Hint="Datum Razduženja" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
 
         <Button x:Name="Dugme_Potvrdi" Grid.Row="4" Grid.Column="1"  Margin="48,12,48,11" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Izdavanje knjige" Click="Dugme_Potvrdi_Click"  >
             POTVRDI
