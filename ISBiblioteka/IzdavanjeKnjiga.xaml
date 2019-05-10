@@ -35,7 +35,7 @@
 
         <TextBox x:Name="idClanaTextBox" Grid.Row="1" Grid.Column="1"  VerticalAlignment="Center" Margin="10" materialDesign:HintAssist.Hint="ID člana:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" ToolTip="Unesite ID člana" ></TextBox>
 
-        <DatePicker x:Name="datumIzdavanjaDatePicker" Grid.Row="2" Grid.Column="0"  Margin="10" VerticalAlignment="Center" FontSize="15" materialDesign:HintAssist.Hint="Datum Izdavanja" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+        <DatePicker x:Name="datumZaduzenjaDatePicker" Grid.Row="2" Grid.Column="0"  Margin="10" VerticalAlignment="Center" FontSize="15" materialDesign:HintAssist.Hint="Datum Zaduženja" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
 
         <DatePicker x:Name="datumRazduzenjaDatePicker" Grid.Row="2" Grid.Column="1"  Margin="10" VerticalAlignment="Center" FontSize="15" materialDesign:HintAssist.Hint="Datum Razduženja" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
 

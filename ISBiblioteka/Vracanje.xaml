@@ -61,12 +61,10 @@
                     <GridViewColumn
                         DisplayMemberBinding="{Binding Description}"
                         Header="Student" />
+                    
                     <GridViewColumn
                         DisplayMemberBinding="{Binding Description}"
-                        Header="Količina" />
-                    <GridViewColumn
-                        DisplayMemberBinding="{Binding Description}"
-                        Header="Datum zaduženja" />
+                        Header="Datum Zaduženja" />
                     <GridViewColumn
                         DisplayMemberBinding="{Binding Description}"
                         Header="Datum razduženja" />

@@ -29,6 +29,18 @@ namespace ISBiblioteka
             if (TestPolja())
             {
                 MessageBox.Show("Polja su pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+                SqlDataAccess sql = new SqlDataAccess();
+
+                if(sql.CuvanjeZaduzenja(int.Parse(idZaduzenjaTextBox.Text), int.Parse(idClanaTextBox.Text), int.Parse(idKnjigeTextBox.Text), datumZaduzenjaDatePicker.Text, datumRazduzenjaDatePicker.Text))
+                {
+                    
+                    MessageBox.Show("Knjiga je uspešno izdata", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+                } else
+                {
+                    MessageBox.Show("Pogrešni ID", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+
+
             } else
             {
                 MessageBox.Show("Polja nisu pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -87,15 +99,15 @@ namespace ISBiblioteka
                 verifikacija3 = true;
             }
 
-            if (string.IsNullOrWhiteSpace(datumIzdavanjaDatePicker.Text) )
+            if (string.IsNullOrWhiteSpace(datumZaduzenjaDatePicker.Text) )
             {
-                datumIzdavanjaDatePicker.Background = Brushes.Red;
+                datumZaduzenjaDatePicker.Background = Brushes.Red;
                 verifikacija4 = false;
 
             }
             else
             {
-                datumIzdavanjaDatePicker.Background = null;
+                datumZaduzenjaDatePicker.Background = null;
                 verifikacija4 = true;
             }
 

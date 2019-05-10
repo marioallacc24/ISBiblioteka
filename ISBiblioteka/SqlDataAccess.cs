@@ -50,6 +50,40 @@ namespace ISBiblioteka
 
         }
 
+        public bool CuvanjeZaduzenja(int idZaduzenja, int idClana, int idKnjiga, string datumZaduzenja, string datumRazduzenja)
+        {
+            SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=db_ISBiblioteka.db;Version=3;");
+            if (m_dbConnection.State == ConnectionState.Closed)
+                m_dbConnection.Open();
+
+            try
+            {
+
+
+                String query = "insert into zaduzenja(id,idClan,idKnjiga,datumZaduzenja,datumRazduzenja)values('" + idZaduzenja + "','" + idClana + "','" + idKnjiga + "','" + datumZaduzenja + "','" + datumRazduzenja + "')";
+                SQLiteCommand cmd = new SQLiteCommand(query, m_dbConnection);
+                cmd.ExecuteNonQuery();
+                return true;
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                m_dbConnection.Close();
+            }
+
+        }
+
+        
+
         public bool CuvanjeClana(Clan clan)
         {
             SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=db_ISBiblioteka.db;Version=3;");
