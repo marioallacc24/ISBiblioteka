@@ -42,7 +42,7 @@ namespace ISBiblioteka
 
         private void Dugme_O_Click(object sender, RoutedEventArgs e)
         {
-
+            System.Diagnostics.Process.Start(@"C:\Users\MarioPC\Source\Repos\marioallacc24\ISBiblioteka\ISBiblioteka\resursi\isBiblioteka.chm");
         }
     }
 }

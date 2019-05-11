@@ -30,7 +30,7 @@
             <RowDefinition Height="29*"/>
         </Grid.RowDefinitions>
 
-        <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Margin="10" Source="resursi/edu_logo.png"/>
+        <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="4" Margin="10" Source="resursi/edu_logo.png"/>
 
         <Button x:Name="Dugme_GitHub" Grid.Row="0" Grid.Column="1" Style="{StaticResource MaterialDesignRaisedButton}"  Width="100"  ToolTip="Pomoć na Gitu" Click="Dugme_GitHub_Click">
             GitHub
