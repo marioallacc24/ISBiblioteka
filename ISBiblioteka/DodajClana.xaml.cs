@@ -305,15 +305,34 @@ namespace ISBiblioteka
 
 
             idClanTextBox.Text = Convert.ToString(id);
+            idClanTextBox.Background = null;
+
             imeTextBox.Text = clan.Ime;
+            imeTextBox.Background = null;
+
             prezimeTextBox.Text = clan.Prezime;
+            prezimeTextBox.Background = null;
+
             emailTextBox.Text = clan.Prezime;
+            emailTextBox.Background = null;
+
             brojTelefonaTextBox.Text = clan.BrojTelefona;
+            brojTelefonaTextBox.Background = null;
+
             jmbgTextBox.Text = clan.Jmbg;
+            jmbgTextBox.Background = null;
+
             brojIndeksaTextBox.Text = clan.BrojIndeksa;
+            brojIndeksaTextBox.Background = null;
+
             fakultetComoBox.Text = clan.Fakultet;
+            imeTefakultetComoBoxxtBox.Background = null;
+
             godinaUpisaDatePicker.Text = clan.GodinaUpisa;
+            godinaUpisaDatePicker.Background = null;
+
             datumUclanjivanjaDatePicker.Text = clan.DatumUclanjivanja;
+            datumUclanjivanjaDatePicker.Background = null;
 
         }
     }
