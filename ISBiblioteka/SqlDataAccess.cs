@@ -50,7 +50,7 @@ namespace ISBiblioteka
 
         }
 
-        public bool CuvanjeZaduzenja(int idZaduzenja, int idClana, int idKnjiga, string datumZaduzenja, string datumRazduzenja)
+        public bool CuvanjeClana(Clan clan)
         {
             SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=db_ISBiblioteka.db;Version=3;");
             if (m_dbConnection.State == ConnectionState.Closed)
@@ -60,7 +60,7 @@ namespace ISBiblioteka
             {
 
 
-                String query = "insert into zaduzenja(id,idClan,idKnjiga,datumZaduzenja,datumRazduzenja)values('" + idZaduzenja + "','" + idClana + "','" + idKnjiga + "','" + datumZaduzenja + "','" + datumRazduzenja + "')";
+                String query = "insert into clan(id,ime,prezime,email,brojTelefona,jmbg,jeStudent,brIndeksa,fakultet,godinaUpisa,datumUclanjivanja,dugovanja)values('" + clan.Id + "','" + clan.Ime + "','" + clan.Prezime + "','" + clan.Email + "','" + clan.BrojTelefona + "','" + clan.Jmbg + "','" + clan.JeStudent + "','" + clan.BrojIndeksa + "','" + clan.Fakultet + "','" + clan.GodinaUpisa + "','" + clan.DatumUclanjivanja + "','" + clan.Dugovanje + "')";
                 SQLiteCommand cmd = new SQLiteCommand(query, m_dbConnection);
                 cmd.ExecuteNonQuery();
                 return true;
@@ -82,9 +82,38 @@ namespace ISBiblioteka
 
         }
 
-        
+        public bool CuvanjeIzmeneClan(int id, Clan clan)
+        {
+            SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=db_ISBiblioteka.db;Version=3;");
+            if (m_dbConnection.State == ConnectionState.Closed)
+                m_dbConnection.Open();
 
-        public bool CuvanjeClana(Clan clan)
+            try
+            {
+
+                
+
+                String query = "UPDATE clan SET ime = '" + clan.Ime + "',prezime = '" + clan.Prezime + "',email='" + clan.Email + "' ,brojTelefona='" + clan.BrojTelefona + "' ,jmbg= '" + clan.Jmbg + "',jeStudent='" + clan.JeStudent + "' ,brIndeksa= '" + clan.BrojIndeksa + "',fakultet= '" + clan.Fakultet + "',godinaUpisa= '" + clan.GodinaUpisa + "',datumUclanjivanja= '" + clan.DatumUclanjivanja + "' where id = (" + id + ")";
+                SQLiteCommand cmd = new SQLiteCommand(query, m_dbConnection);
+                cmd.ExecuteNonQuery();
+                return true;
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                m_dbConnection.Close();
+            }
+        }
+        public bool CuvanjeZaduzenja(int idZaduzenja, int idClana, int idKnjiga, string datumZaduzenja, string datumRazduzenja)
         {
             SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=db_ISBiblioteka.db;Version=3;");
             if (m_dbConnection.State == ConnectionState.Closed)
@@ -94,7 +123,7 @@ namespace ISBiblioteka
             {
 
 
-                String query = "insert into clan(id,ime,prezime,email,brojTelefona,jmbg,jeStudent,brIndeksa,fakultet,godinaUpisa,datumUclanjivanja,dugovanja)values('" + clan.Id + "','" + clan.Ime + "','" + clan.Prezime + "','" + clan.Email + "','" + clan.BrojTelefona + "','" + clan.Jmbg + "','" + clan.JeStudent + "','" + clan.BrojIndeksa + "','" + clan.Fakultet + "','" + clan.GodinaUpisa + "','" + clan.DatumUclanjivanja + "','" + clan.Dugovanje + "')";
+                String query = "insert into zaduzenja(id,idClan,idKnjiga,datumZaduzenja,datumRazduzenja)values('" + idZaduzenja + "','" + idClana + "','" + idKnjiga + "','" + datumZaduzenja + "','" + datumRazduzenja + "')";
                 SQLiteCommand cmd = new SQLiteCommand(query, m_dbConnection);
                 cmd.ExecuteNonQuery();
                 return true;
@@ -266,6 +295,44 @@ namespace ISBiblioteka
                 m_dbConnection.Close();
             }
 
+        }
+
+        public Clan IscitavanjeClan(int id)
+        {
+
+            SQLiteConnection sql_con = new SQLiteConnection("Data Source=db_ISBiblioteka.db;Version=3;");   //podesavanje konekcije
+            sql_con.Open(); //otvaranje kenekcije
+            SQLiteCommand sql_cmd = sql_con.CreateCommand();    //podesavanje komandnog objekta na konekciju
+            sql_cmd.CommandText = "SELECT * FROM clan WHERE id=(" + id + ")"; //u komandni objekat saljemo sql zahtev
+            SQLiteDataAdapter DB = new SQLiteDataAdapter(sql_cmd.CommandText, sql_con); //sql adapter db izvrsava komandnu odnonso u sebi cuva rezultate sql zahteva (ucitao sve podatke u sebe)
+            sql_con.Close();    //zatavaramo konekciju
+            DataSet DS = new DataSet();     //kreiramo objekta data set koji ce da cuva poadtke iz data dabtera
+            DB.Fill(DS);    //dataset punimo podacima iz adaptera
+
+            try
+            {
+                string ime = DS.Tables[0].Rows[0]["ime"].ToString();
+                string prezime = DS.Tables[0].Rows[0]["prezime"].ToString();
+                string email = DS.Tables[0].Rows[0]["email"].ToString();
+                string brojTelefona = DS.Tables[0].Rows[0]["brojTelefona"].ToString();
+                string jmbg = DS.Tables[0].Rows[0]["jmbg"].ToString();
+                bool jeStudent = (bool)DS.Tables[0].Rows[0]["jeStudent"];
+                string brIndeksa = DS.Tables[0].Rows[0]["brIndeksa"].ToString();
+                string fakultet = DS.Tables[0].Rows[0]["fakultet"].ToString();
+                string godinaUpisa = DS.Tables[0].Rows[0]["godinaUpisa"].ToString();
+                string datumUclanjivanja = DS.Tables[0].Rows[0]["datumUclanjivanja"].ToString();
+
+                Clan clan = new Clan(id, ime, prezime, email, brojTelefona, jmbg, jeStudent, brIndeksa, fakultet, godinaUpisa, datumUclanjivanja);
+                return clan;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+            return null;
+               
         }
     }
 }

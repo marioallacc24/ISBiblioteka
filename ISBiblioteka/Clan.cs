@@ -44,6 +44,7 @@ namespace ISBiblioteka
             Ime = ime;
             Prezime = prezime;
             Email = email;
+            Jmbg = jmbg;
             BrojTelefona = brojTelefona;
             JeStudent = jeStudent;
             BrojIndeksa = brojIndeksa;

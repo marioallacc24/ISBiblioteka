@@ -46,7 +46,7 @@ namespace ISBiblioteka
             dodajKnjigu.Show();
         }
 
-        private void Dugme_DodajClana_Click(object sender, RoutedEventArgs e)
+        public void Dugme_DodajClana_Click(object sender, RoutedEventArgs e)
         {
             DodajClana dodajClana = new DodajClana();
             dodajClana.Show();

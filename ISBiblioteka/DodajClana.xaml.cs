@@ -25,7 +25,7 @@ namespace ISBiblioteka
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
-        public void ResetFields()
+        private void ResetFields()
         {
             idClanTextBox.Text = "";
             idClanTextBox.Background = null;
@@ -51,7 +51,7 @@ namespace ISBiblioteka
 
 
         }
-        public bool TestPolja()
+        private bool TestPolja()
         {
             bool verifikacija = true;
 
@@ -207,6 +207,20 @@ namespace ISBiblioteka
             
         }
 
+        private bool TestID()
+        {
+            if(string.IsNullOrWhiteSpace(idClanTextBox.Text) || System.Text.RegularExpressions.Regex.IsMatch(idClanTextBox.Text, "[^0-9]"))
+            {
+                idClanTextBox.Background = Brushes.Red;
+                return false;
+            }
+            else
+            {
+                idClanTextBox.Background = null;
+                return true;
+            }
+        }
+
         private void Dugme_Sacuvaj_Click(object sender, RoutedEventArgs e)
         {
             if (TestPolja())
@@ -244,7 +258,63 @@ namespace ISBiblioteka
 
         private void Dugme_Obrisi_Click(object sender, RoutedEventArgs e)
         {
-            ResetFields();
+            if (TestPolja())
+            {
+
+                MessageBox.Show("Polja su pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                Clan clan = new Clan(int.Parse(idClanTextBox.Text), imeTextBox.Text, prezimeTextBox.Text, emailTextBox.Text, brojTelefonaTextBox.Text, jmbgTextBox.Text, (bool)studentJeClanCheckBox.IsChecked, brojIndeksaTextBox.Text, fakultetComoBox.Text, godinaUpisaDatePicker.Text, datumUclanjivanjaDatePicker.Text);
+                SqlDataAccess sql = new SqlDataAccess();
+
+                if (sql.CuvanjeIzmeneClan(int.Parse(idClanTextBox.Text),clan))
+                {
+                    MessageBox.Show("Član je uspešno izmenjen", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Izmena nije uspela", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+
+            }
+            else
+            {
+
+                MessageBox.Show("Polja nisu pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            }
+        }
+
+        private void Dugme_Izmena_Click(object sender, RoutedEventArgs e)
+        {
+            if (TestID())
+            {
+                MessageBox.Show("Polja su pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+                SqlDataAccess sql = new SqlDataAccess();
+
+                PopuniPolja(sql.IscitavanjeClan(int.Parse(idClanTextBox.Text)));
+
+            } else
+            {
+                MessageBox.Show("Polja nisu pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        public void PopuniPolja(Clan clan)
+        {
+            int id = clan.Id;
+
+
+            idClanTextBox.Text = Convert.ToString(id);
+            imeTextBox.Text = clan.Ime;
+            prezimeTextBox.Text = clan.Prezime;
+            emailTextBox.Text = clan.Prezime;
+            brojTelefonaTextBox.Text = clan.BrojTelefona;
+            jmbgTextBox.Text = clan.Jmbg;
+            brojIndeksaTextBox.Text = clan.BrojIndeksa;
+            fakultetComoBox.Text = clan.Fakultet;
+            godinaUpisaDatePicker.Text = clan.GodinaUpisa;
+            datumUclanjivanjaDatePicker.Text = clan.DatumUclanjivanja;
+
         }
     }
 }
