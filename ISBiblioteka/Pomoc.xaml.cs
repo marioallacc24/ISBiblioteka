@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Forms;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -25,6 +27,8 @@ namespace ISBiblioteka
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
+        private const string sHTMLHelpFileName = "isBiblioteka.chm";
+
         private void Dugme_GitHub_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/marioallacc24/ISBiblioteka");
@@ -42,7 +46,10 @@ namespace ISBiblioteka
 
         private void Dugme_O_Click(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Process.Start(@"C:\Users\MarioPC\Source\Repos\marioallacc24\ISBiblioteka\ISBiblioteka\resursi\isBiblioteka.chm");
+
+            System.Diagnostics.Process.Start(Directory.GetCurrentDirectory() + @"\" +sHTMLHelpFileName);
+
+            
         }
     }
 }
