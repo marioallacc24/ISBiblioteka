@@ -32,6 +32,35 @@ namespace ISBiblioteka
             Close();
         }
 
+        private void Dugme_Vrati_Click(object sender, RoutedEventArgs e)
+        {
+            if (TestPolja())
+            {
+                SqlDataAccess sql = new SqlDataAccess();
+                ;
+
+                if(sql.BrisanjeZaduzenja(int.Parse(idZaduzenja.Text)) && sql.PromenaDugovanjaVratio(int.Parse(idZaduzenja.Text)))
+                {
+
+                    MessageBox.Show("Knjiga je uspešno vraćenja", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Pogrešni ID", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+
+                MessageBox.Show("Polja su pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+            } else
+            {
+                MessageBox.Show("Polja nisu pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void Dugme_Osvezi_Click(object sender, RoutedEventArgs e)
+        {
+            UcitajZaduzenja();
+        }
+
         private void UcitajZaduzenja()
         {
             SQLiteConnection sql_con = new SQLiteConnection("Data Source=db_ISBiblioteka.db;Version=3;");   //podesavanje konekcije
@@ -47,6 +76,27 @@ namespace ISBiblioteka
 
             vracanjeListView.ItemsSource = DS.Tables[0].DefaultView;   //data set podatke ispisujemo u listview
         }
+
+        private bool TestPolja()
+        {
+            bool verifikacija = true;
+
+            if(string.IsNullOrWhiteSpace(idZaduzenja.Text) || System.Text.RegularExpressions.Regex.IsMatch(idZaduzenja.Text, "[^0-9]"))
+            {
+                idZaduzenja.Background = Brushes.Red;
+                verifikacija = false;
+                return verifikacija;
+            }
+            else
+            {
+                idZaduzenja.Background = null;
+                verifikacija = true;
+                return verifikacija;
+            }
+        
+        }
+
+        
         
     }
 }

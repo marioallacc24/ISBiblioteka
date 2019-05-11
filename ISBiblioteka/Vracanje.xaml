@@ -6,7 +6,7 @@
         
         xmlns:local="clr-namespace:ISBiblioteka"
         mc:Ignorable="d"
-        Title="Vraćanje" Height="500" Width="850"
+        Title="Vraćanje" Height="500" Width="900"
         WindowStartupLocation="CenterScreen"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -25,6 +25,7 @@
             <ColumnDefinition Width="163*"/>
             <ColumnDefinition Width="150"/>
             <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="60*"/>
@@ -41,7 +42,7 @@
             <RowDefinition Height="127*"/>
         </Grid.RowDefinitions>
 
-        <ListView x:Name="vracanjeListView" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="11" >
+        <ListView x:Name="vracanjeListView" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6" Grid.RowSpan="11" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn
@@ -79,8 +80,14 @@
             </ListView.View>
         </ListView>
 
-        <Button Grid.Row="11" Grid.Column="4" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Vrati">
-            Vrati
+        <TextBox x:Name="idZaduzenja" Grid.Row="11" Grid.Column="0"  Margin="10" materialDesign:HintAssist.Hint="ID Zaduženja:" FontSize="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" ToolTip="Unesite ID koji želite da razdužite"></TextBox>
+
+
+        <Button x:Name="Dugme_Vrati" Grid.Row="11" Grid.Column="5" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Vrati" Click="Dugme_Vrati_Click">
+            VRATI
+        </Button>
+        <Button x:Name="Dugme_Osvezi" Grid.Row="11" Grid.Column="4" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Vrati" Click="Dugme_Osvezi_Click">
+            OSVEŽI
         </Button>
         <Button x:Name="Dugme_Otkazi" Grid.Row="11" Grid.Column="3" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Otkaži" Click="Dugme_Otkazi_Click">
             OTKAŽI
