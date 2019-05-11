@@ -7,6 +7,7 @@
         xmlns:local="clr-namespace:ISBiblioteka"
         mc:Ignorable="d"
         Title="Vraćanje" Height="500" Width="850"
+        WindowStartupLocation="CenterScreen"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -40,20 +41,20 @@
             <RowDefinition Height="127*"/>
         </Grid.RowDefinitions>
 
-        <ListView Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="11" ItemsSource="{Binding Items1}">
+        <ListView x:Name="vracanjeListView" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="11" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn
-                        DisplayMemberBinding="{Binding Code}"
+                        DisplayMemberBinding="{Binding id}"
                         Header="ID Zaduženja" />
                     <GridViewColumn
-                        DisplayMemberBinding="{Binding Code}"
+                        DisplayMemberBinding="{Binding idKnjiga}"
                         Header="ID Knjige" />
                     <GridViewColumn
                         DisplayMemberBinding="{Binding Name}"
                         Header="Naziv" />
                     <GridViewColumn
-                        DisplayMemberBinding="{Binding Code}"
+                        DisplayMemberBinding="{Binding idClan}"
                         Header="ID Člana" />
                     
                     <GridViewColumn
@@ -67,10 +68,10 @@
                         Header="Student" />
                     
                     <GridViewColumn
-                        DisplayMemberBinding="{Binding Description}"
+                        DisplayMemberBinding="{Binding datumZaduzenja}"
                         Header="Datum Zaduženja" />
                     <GridViewColumn
-                        DisplayMemberBinding="{Binding Description}"
+                        DisplayMemberBinding="{Binding datumRazduzenja}"
                         Header="Datum razduženja" />
                     
                  
