@@ -326,7 +326,7 @@ namespace ISBiblioteka
             brojIndeksaTextBox.Background = null;
 
             fakultetComoBox.Text = clan.Fakultet;
-            imeTefakultetComoBoxxtBox.Background = null;
+            fakultetComoBox.Background = null;
 
             godinaUpisaDatePicker.Text = clan.GodinaUpisa;
             godinaUpisaDatePicker.Background = null;
