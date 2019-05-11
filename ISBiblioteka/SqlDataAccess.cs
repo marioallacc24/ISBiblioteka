@@ -113,6 +113,38 @@ namespace ISBiblioteka
                 m_dbConnection.Close();
             }
         }
+
+        public bool CuvanjeIzmeneKnjiga(int id, Knjiga knjiga)
+        {
+            SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=db_ISBiblioteka.db;Version=3;");
+            if (m_dbConnection.State == ConnectionState.Closed)
+                m_dbConnection.Open();
+
+            try
+            {
+
+
+
+                String query = "UPDATE knjiga SET isbn = '" + knjiga.Isbn + "',naziv = '" + knjiga.Naziv + "',autor='" + knjiga.Autor + "' ,opis='" + knjiga.Opis + "' ,kategorija= '" + knjiga.Kategorija + "',izdavac='" + knjiga.Izdavac + "' ,format= '" + knjiga.Format + "',kolicina= '" + knjiga.Kolicina + "',datumDodavanja= '" + knjiga.DatumDodavanja + "',datumIzdavanja= '" + knjiga.DatumIzdavanja + "' where id = (" + id + ")";
+                SQLiteCommand cmd = new SQLiteCommand(query, m_dbConnection);
+                cmd.ExecuteNonQuery();
+                return true;
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                m_dbConnection.Close();
+            }
+        }
         public bool CuvanjeZaduzenja(int idZaduzenja, int idClana, int idKnjiga, string datumZaduzenja, string datumRazduzenja)
         {
             SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=db_ISBiblioteka.db;Version=3;");
@@ -333,6 +365,47 @@ namespace ISBiblioteka
 
             return null;
                
+        }
+
+        public Knjiga IscitavanjeKnjiga(int id)
+        {
+
+            SQLiteConnection sql_con = new SQLiteConnection("Data Source=db_ISBiblioteka.db;Version=3;");   //podesavanje konekcije
+            sql_con.Open(); //otvaranje kenekcije
+            SQLiteCommand sql_cmd = sql_con.CreateCommand();    //podesavanje komandnog objekta na konekciju
+            sql_cmd.CommandText = "SELECT * FROM knjiga WHERE id=(" + id + ")"; //u komandni objekat saljemo sql zahtev
+            SQLiteDataAdapter DB = new SQLiteDataAdapter(sql_cmd.CommandText, sql_con); //sql adapter db izvrsava komandnu odnonso u sebi cuva rezultate sql zahteva (ucitao sve podatke u sebe)
+            sql_con.Close();    //zatavaramo konekciju
+            DataSet DS = new DataSet();     //kreiramo objekta data set koji ce da cuva poadtke iz data dabtera
+            DB.Fill(DS);    //dataset punimo podacima iz adaptera
+
+            try
+            {
+                string isbn = DS.Tables[0].Rows[0]["isbn"].ToString();
+                string naziv = DS.Tables[0].Rows[0]["naziv"].ToString();
+                string autor = DS.Tables[0].Rows[0]["autor"].ToString();
+                string opis = DS.Tables[0].Rows[0]["opis"].ToString();
+                string kategorija = DS.Tables[0].Rows[0]["kategorija"].ToString();
+                string izdavac = DS.Tables[0].Rows[0]["izdavac"].ToString();
+                string format = DS.Tables[0].Rows[0]["format"].ToString();
+                int kolicina = Convert.ToInt32(DS.Tables[0].Rows[0]["kolicina"]);
+                
+
+
+                string datumDodavanja = DS.Tables[0].Rows[0]["datumDodavanja"].ToString();
+                string datumIzdavanja = DS.Tables[0].Rows[0]["datumIzdavanja"].ToString();
+
+                Knjiga knjiga = new Knjiga(id, isbn, naziv, autor, opis, kategorija, izdavac, format, kolicina, datumDodavanja, datumIzdavanja);
+                return knjiga;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+            return null;
+
         }
     }
 }

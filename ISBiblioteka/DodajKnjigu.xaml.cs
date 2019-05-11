@@ -194,6 +194,20 @@ namespace ISBiblioteka
             }
         }
 
+        private bool TestID()
+        {
+            if (string.IsNullOrWhiteSpace(idTextBox.Text) || System.Text.RegularExpressions.Regex.IsMatch(idTextBox.Text, "[^0-9]"))
+            {
+                idTextBox.Background = Brushes.Red;
+                return false;
+            }
+            else
+            {
+                idTextBox.Background = null;
+                return true;
+            }
+        }
+
         private void Dugme_Otkazi_Click(object sender, RoutedEventArgs e)
         {
             Close();
@@ -226,7 +240,88 @@ namespace ISBiblioteka
 
         private void Dugme_Obrisi_Click(object sender, RoutedEventArgs e)
         {
-            ResetFields();
+            if (TestPolja())
+            {
+
+                MessageBox.Show("Polja su pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                Knjiga knjiga = new Knjiga(int.Parse(idTextBox.Text), isbnTextBox.Text, nazivTextBox.Text, autorTextBox.Text, opisTextBox.Text, kategorijaComoBox.Text, izdavacTextBox.Text, formatComboBox.Text, int.Parse(kolicinaComboBox.Text), datumIzdavanjaDatePicker.Text, datumDodavanjaDatePicker.Text);
+                SqlDataAccess sql = new SqlDataAccess();
+
+                if (sql.CuvanjeIzmeneKnjiga(int.Parse(idTextBox.Text), knjiga))
+                {
+                    MessageBox.Show("Knjiga je uspešno izmenjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Izmena nije uspela", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+
+            }
+            else
+            {
+
+                MessageBox.Show("Polja nisu pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            }
+        }
+
+        private void Dugme_Izmena_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (TestID())
+            {
+                MessageBox.Show("Polja su pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+                SqlDataAccess sql = new SqlDataAccess();
+
+                PopuniPolja(sql.IscitavanjeKnjiga(int.Parse(idTextBox.Text)));
+
+            }
+            else
+            {
+                MessageBox.Show("Polja nisu pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+        }
+
+        public void PopuniPolja(Knjiga knjiga)
+        {
+            
+
+
+            idTextBox.Text = Convert.ToString(knjiga.Id);
+            idTextBox.Background = null;
+
+            isbnTextBox.Text = knjiga.Isbn;
+            isbnTextBox.Background = null;
+
+            nazivTextBox.Text = knjiga.Naziv;
+            nazivTextBox.Background = null;
+
+            autorTextBox.Text = knjiga.Autor;
+            autorTextBox.Background = null;
+
+            opisTextBox.Text = knjiga.Opis;
+            opisTextBox.Background = null;
+
+            izdavacTextBox.Text = knjiga.Izdavac;
+            izdavacTextBox.Background = null;
+
+            kategorijaComoBox.Text = knjiga.Kategorija;
+            kategorijaComoBox.Background = null;
+
+            formatComboBox.Text = knjiga.Format;
+            formatComboBox.Background = null;
+
+            kolicinaComboBox.Text = Convert.ToString(knjiga.Kolicina);
+            kolicinaComboBox.Background = null;
+
+            datumIzdavanjaDatePicker.Text =knjiga.DatumIzdavanja;
+            datumIzdavanjaDatePicker.Background = null;
+
+            datumDodavanjaDatePicker.Text = knjiga.DatumDodavanja;
+            datumDodavanjaDatePicker.Background = null;
+
         }
     }
 }
