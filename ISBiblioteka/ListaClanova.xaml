@@ -6,7 +6,7 @@
         
         xmlns:local="clr-namespace:ISBiblioteka"
         mc:Ignorable="d"
-        Title="Lista članova" Height="500" Width="1100"
+        Title="Lista članova" Height="500" Width="1300"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -65,7 +65,10 @@
                         <GridViewColumn
                         DisplayMemberBinding="{Binding jmbg}"
                         Header="JMBG" />
-                        <GridViewColumn
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding dugovanja}"
+                        Header="Duguje knjigu" />
+                    <GridViewColumn
                         DisplayMemberBinding="{Binding jeStudent}"
                         Header="Clan je studnet" />
                         <GridViewColumn
@@ -77,9 +80,7 @@
                         <GridViewColumn
                         DisplayMemberBinding="{Binding godinaUpisa}"
                         Header="Godina Upisa" />
-                     <GridViewColumn
-                        DisplayMemberBinding="{Binding dugovanja}"
-                        Header="Duguje knjigu" />
+                     
                     <GridViewColumn
                         DisplayMemberBinding="{Binding datumUclanjivanja}"
                         Header="Datum Uclanjivanja" />

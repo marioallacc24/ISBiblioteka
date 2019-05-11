@@ -43,6 +43,7 @@
             <ListView.View>
                 <GridView>
                     <GridViewColumn
+                        Width="50"
                         DisplayMemberBinding="{Binding id}"
                         Header="ID" />
                     <GridViewColumn
@@ -69,13 +70,14 @@
                     <GridViewColumn
                         DisplayMemberBinding="{Binding dostupno}"
                         Header="Dostupno" />
+                    
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding datumIzdavanja}"
+                        Header="Datum štampe" />
                     <GridViewColumn
                         Width="100"
                         DisplayMemberBinding="{Binding opis}"
                         Header="Opis" />
-                    <GridViewColumn
-                        DisplayMemberBinding="{Binding datumIzdavanja}"
-                        Header="Datum štampe" />
                     
                 </GridView>
             </ListView.View>

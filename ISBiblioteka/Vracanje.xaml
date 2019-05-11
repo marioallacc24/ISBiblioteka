@@ -51,20 +51,20 @@
                         DisplayMemberBinding="{Binding idKnjiga}"
                         Header="ID Knjige" />
                     <GridViewColumn
-                        DisplayMemberBinding="{Binding Name}"
+                        DisplayMemberBinding="{Binding naziv}"
                         Header="Naziv" />
                     <GridViewColumn
                         DisplayMemberBinding="{Binding idClan}"
                         Header="ID Člana" />
                     
                     <GridViewColumn
-                        DisplayMemberBinding="{Binding Description}"
+                        DisplayMemberBinding="{Binding ime}"
                         Header="Ime" />
                     <GridViewColumn
-                        DisplayMemberBinding="{Binding Description}"
+                        DisplayMemberBinding="{Binding prezime}"
                         Header="Prezime" />
                     <GridViewColumn
-                        DisplayMemberBinding="{Binding Description}"
+                        DisplayMemberBinding="{Binding jeStudent}"
                         Header="Student" />
                     
                     <GridViewColumn
