@@ -56,7 +56,7 @@ namespace ISBiblioteka
                 }
                 else
                 {
-                    MessageBox.Show("Pogresni podatci", "Greska", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("Pogresni podaci", "Greška", MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
             }
             catch (Exception ex)
