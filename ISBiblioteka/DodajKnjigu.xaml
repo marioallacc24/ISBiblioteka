@@ -122,7 +122,7 @@
         <Button x:Name="Dugme_Izmena" Grid.Row="11" Grid.Column="0" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Izmena knjige" Click="Dugme_Izmena_Click">
             IZMENA
         </Button>
-        <Button x:Name="Dugme_Obrisi" Grid.Row="11" Grid.Column="1" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Obriši polja" Click="Dugme_Obrisi_Click">
+        <Button x:Name="Dugme_Obrisi" Grid.Row="11" Grid.Column="1" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Potvrdi izmenu" Click="Dugme_Obrisi_Click">
             POTVRDI
         </Button>
 

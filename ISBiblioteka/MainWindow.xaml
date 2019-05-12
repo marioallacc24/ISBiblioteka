@@ -38,7 +38,6 @@
   Mode="PrimaryDark"
   Padding="10"
   CornerRadius="5"
-  materialDesign:ShadowAssist.ShadowDepth="Depth5"
   Margin="1">
 
 

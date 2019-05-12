@@ -32,7 +32,7 @@
 
         <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="4" Margin="10" Source="resursi/edu_logo.png"/>
 
-        <Button x:Name="Dugme_GitHub" Grid.Row="0" Grid.Column="1" Style="{StaticResource MaterialDesignRaisedButton}"  Width="100"  ToolTip="Pomoć na Gitu" Click="Dugme_GitHub_Click">
+        <Button x:Name="Dugme_GitHub" Grid.Row="0" Grid.Column="1" Style="{StaticResource MaterialDesignRaisedButton}"  Width="100"  ToolTip="Izvorni kod" Click="Dugme_GitHub_Click">
             GitHub
         </Button>
         <Button x:Name="Dugme_Linkedin" Grid.Row="1" Grid.Column="1" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Linkdin" Click="Dugme_Linkedin_Click">
@@ -42,7 +42,7 @@
             Sajt
         </Button>
 
-        <Button x:Name="Dugme_O" Grid.Row="3" Grid.Column="1" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Educons sajt" Click="Dugme_O_Click">
+        <Button x:Name="Dugme_O" Grid.Row="3" Grid.Column="1" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Pomoć fajl" Click="Dugme_O_Click">
             O
         </Button>
 
