@@ -55,7 +55,10 @@ namespace ISBiblioteka
             DB.Fill(DS);    //dataset punimo podacima iz adaptera
 
 
-            izdavanjeListView.ItemsSource = DS.Tables[0].DefaultView;   //data set podatke ispisujemo u listview
+            if (DS.Tables[0].Rows.Count > 0)
+            {
+                izdavanjeDataGrid.ItemsSource = DS.Tables[0].DefaultView;
+            }
         }
 
         private void Dugme_Obrisi_Click(object sender, RoutedEventArgs e)
