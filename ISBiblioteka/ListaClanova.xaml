@@ -44,49 +44,28 @@
                 <RowDefinition Height="127*"/>
             </Grid.RowDefinitions>
 
-            <ListView x:Name="clanoviListView" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6" Grid.RowSpan="11">
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn
-                        DisplayMemberBinding="{Binding id}"
-                        Header="ID" />
-                        <GridViewColumn
-                        DisplayMemberBinding="{Binding ime}"
-                        Header="Ime" />
-                        <GridViewColumn
-                        DisplayMemberBinding="{Binding prezime}"
-                        Header="Prezime" />
-                        <GridViewColumn
-                        DisplayMemberBinding="{Binding email}"
-                        Header="Email" />
-                        <GridViewColumn
-                        DisplayMemberBinding="{Binding brojTelefona}"
-                        Header="Broj Telefona" />
-                        <GridViewColumn
-                        DisplayMemberBinding="{Binding jmbg}"
-                        Header="JMBG" />
-                    <GridViewColumn
-                        DisplayMemberBinding="{Binding dugovanja}"
-                        Header="Duguje knjigu" />
-                    <GridViewColumn
-                        DisplayMemberBinding="{Binding jeStudent}"
-                        Header="Clan je studnet" />
-                        <GridViewColumn
-                        DisplayMemberBinding="{Binding brIndeksa}"
-                        Header="Broj Indeksa" />
-                        <GridViewColumn
-                        DisplayMemberBinding="{Binding fakultet}"
-                        Header="Fakultet" />
-                        <GridViewColumn
-                        DisplayMemberBinding="{Binding godinaUpisa}"
-                        Header="Godina Upisa" />
-                     
-                    <GridViewColumn
-                        DisplayMemberBinding="{Binding datumUclanjivanja}"
-                        Header="Datum Uclanjivanja" />
-                    </GridView>
-                </ListView.View>
-            </ListView>
+        <DataGrid x:Name="listaClanovaDataGrid" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6" Grid.RowSpan="11" CanUserSortColumns="True" CanUserAddRows="False" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="ID"  Binding="{Binding id}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Ime"  Binding="{Binding ime}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Prezime"  Binding="{Binding prezime}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Email"  Binding="{Binding email}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Broj Telefona"  Binding="{Binding brojTelefona}"></DataGridTextColumn>
+                <DataGridTextColumn Header="JMBG"  Binding="{Binding jmbg}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Duguje knjigu"  Binding="{Binding dugovanja}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Clan je studnet"  Binding="{Binding jeStudent}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Broj Indeksa"  Binding="{Binding brIndeksa}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Fakultet"  Binding="{Binding fakultet}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Godina Upisa"  Binding="{Binding godinaUpisa}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Datum Uclanjivanja"  Binding="{Binding datumUclanjivanja}"></DataGridTextColumn>
+
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+       
 
             <Button x:Name="Dugme_Obrisi" Grid.Row="11" Grid.Column="5" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Brisanje člana" Click="Dugme_Obrisi_Click">
                 OBRIŠI
