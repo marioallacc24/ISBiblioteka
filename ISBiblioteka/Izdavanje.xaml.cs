@@ -67,7 +67,7 @@ namespace ISBiblioteka
             brisanjeKnjige.ShowDialog();
         }
 
-        private void Dugme_Osvezi_Click(object sender, RoutedEventArgs e)
+        private  void Dugme_Osvezi_Click(object sender, RoutedEventArgs e)
         {
             UcitajKnjige();
 

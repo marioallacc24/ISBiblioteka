@@ -28,7 +28,7 @@ namespace ISBiblioteka
         {
             if (TestPolja())
             {
-                MessageBox.Show("Polja su pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+               // MessageBox.Show("Polja su pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
                 SqlDataAccess sql = new SqlDataAccess();
 
                 if(sql.CuvanjeZaduzenja(int.Parse(idZaduzenjaTextBox.Text), int.Parse(idClanaTextBox.Text), int.Parse(idKnjigeTextBox.Text), datumZaduzenjaDatePicker.Text, datumRazduzenjaDatePicker.Text) && sql.PromenaDugovanja(int.Parse(idClanaTextBox.Text)))

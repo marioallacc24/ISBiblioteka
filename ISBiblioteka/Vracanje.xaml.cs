@@ -49,7 +49,7 @@ namespace ISBiblioteka
                     MessageBox.Show("Pogrešni ID", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 
-                MessageBox.Show("Polja su pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+               // MessageBox.Show("Polja su pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
             } else
             {
                 MessageBox.Show("Polja nisu pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Error);

@@ -53,7 +53,7 @@ namespace ISBiblioteka
 
         private void Dugme_Obrisi_Click(object sender, RoutedEventArgs e)
         {
-            BrisanjeClana brisanjeClana = new BrisanjeClana();
+            Windows.BrisanjeClana brisanjeClana = new Windows.BrisanjeClana();
             brisanjeClana.ShowDialog();
 
         }

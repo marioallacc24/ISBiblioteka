@@ -226,18 +226,18 @@ namespace ISBiblioteka
             if (TestPolja())
             {
 
-                MessageBox.Show("Polja su pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+                //MessageBox.Show("Polja su pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 Clan clan = new Clan(int.Parse(idClanTextBox.Text), imeTextBox.Text, prezimeTextBox.Text, emailTextBox.Text, brojTelefonaTextBox.Text, jmbgTextBox.Text, (bool)studentJeClanCheckBox.IsChecked, brojIndeksaTextBox.Text, fakultetComoBox.Text, godinaUpisaDatePicker.Text, datumUclanjivanjaDatePicker.Text);
                 SqlDataAccess sql = new SqlDataAccess();
 
                 if (sql.CuvanjeClana(clan))
                 {
-                    MessageBox.Show("Polja su uspesno dodata", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Član je uspešno dodat", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Polja nisu dodata", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Član nije dodat", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
 
             }
@@ -261,7 +261,7 @@ namespace ISBiblioteka
             if (TestPolja())
             {
 
-                MessageBox.Show("Polja su pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+               // MessageBox.Show("Polja su pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 Clan clan = new Clan(int.Parse(idClanTextBox.Text), imeTextBox.Text, prezimeTextBox.Text, emailTextBox.Text, brojTelefonaTextBox.Text, jmbgTextBox.Text, (bool)studentJeClanCheckBox.IsChecked, brojIndeksaTextBox.Text, fakultetComoBox.Text, godinaUpisaDatePicker.Text, datumUclanjivanjaDatePicker.Text);
                 SqlDataAccess sql = new SqlDataAccess();
@@ -288,7 +288,7 @@ namespace ISBiblioteka
         {
             if (TestID())
             {
-                MessageBox.Show("Polja su pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+               // MessageBox.Show("Polja su pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
                 SqlDataAccess sql = new SqlDataAccess();
 
                 PopuniPolja(sql.IscitavanjeClan(int.Parse(idClanTextBox.Text)));

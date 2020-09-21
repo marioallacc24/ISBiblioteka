@@ -116,7 +116,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="BrisanjeClana.xaml.cs">
+    <Compile Include="Windows\BrisanjeClana.xaml.cs">
       <DependentUpon>BrisanjeClana.xaml</DependentUpon>
     </Compile>
     <Compile Include="BrisanjeKnjige.xaml.cs">
@@ -143,7 +143,10 @@
     <Compile Include="Vracanje.xaml.cs">
       <DependentUpon>Vracanje.xaml</DependentUpon>
     </Compile>
-    <Page Include="BrisanjeClana.xaml">
+    <Compile Include="Windows\Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Windows\BrisanjeClana.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -205,6 +208,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Vracanje.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Window1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

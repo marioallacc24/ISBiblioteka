@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace ISBiblioteka
+namespace ISBiblioteka.Windows
 {
     /// <summary>
     /// Interaction logic for BrisanjeClana.xaml
@@ -51,7 +51,7 @@ namespace ISBiblioteka
 
             if (TestPolja())
             {
-                MessageBox.Show("Polja su pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+                //MessageBox.Show("Polja su pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 SqlDataAccess sql = new SqlDataAccess();
 

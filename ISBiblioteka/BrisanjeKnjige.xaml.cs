@@ -47,18 +47,29 @@ namespace ISBiblioteka
 
             if (TestPolja())
             {
-                MessageBox.Show("Polja su pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+                //MessageBox.Show("Polja su pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 SqlDataAccess sql = new SqlDataAccess();
-                sql.BrisanjeKnjiga(int.Parse(idTextBox.Text));
+                
+
+                if (sql.BrisanjeKnjiga(int.Parse(idTextBox.Text)))
+                {
+                    MessageBox.Show("Knjiga je uspešno obrisana", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Knjiga nije obrisan", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
 
 
 
-                Close();
+                
             } else
             {
                 MessageBox.Show("Polja nisu pravilno popunjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+
+            Close();
 
         }
 
