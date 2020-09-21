@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ISBiblioteka
+namespace ISBiblioteka.Windows
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -71,7 +71,7 @@ namespace ISBiblioteka
 
         private void Dugme_ListaClanova_Click(object sender, RoutedEventArgs e)
         {
-            ListaClanova listaClanova = new ListaClanova();
+            Windows.ListaClanova listaClanova = new Windows.ListaClanova();
             listaClanova.Show();
 
         }

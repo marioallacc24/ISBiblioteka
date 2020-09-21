@@ -14,7 +14,7 @@ using System.Windows.Shapes;
 using System.Data;
 using System.Data.SQLite;
 
-namespace ISBiblioteka
+namespace ISBiblioteka.Windows
 {
     /// <summary>
     /// Interaction logic for Vracanje.xaml

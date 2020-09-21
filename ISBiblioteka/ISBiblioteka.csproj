@@ -119,66 +119,60 @@
     <Compile Include="Windows\BrisanjeClana.xaml.cs">
       <DependentUpon>BrisanjeClana.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BrisanjeKnjige.xaml.cs">
+    <Compile Include="Windows\BrisanjeKnjige.xaml.cs">
       <DependentUpon>BrisanjeKnjige.xaml</DependentUpon>
     </Compile>
     <Compile Include="Clan.cs" />
-    <Compile Include="IzdavanjeKnjiga.xaml.cs">
+    <Compile Include="Windows\IzdavanjeKnjiga.xaml.cs">
       <DependentUpon>IzdavanjeKnjiga.xaml</DependentUpon>
     </Compile>
     <Compile Include="Knjiga.cs" />
-    <Compile Include="ListaClanova.xaml.cs">
+    <Compile Include="Windows\ListaClanova.xaml.cs">
       <DependentUpon>ListaClanova.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Login.xaml.cs">
+    <Compile Include="Windows\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Podesavanje.xaml.cs">
-      <DependentUpon>Podesavanje.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pomoc.xaml.cs">
+    <Compile Include="Windows\Pomoc.xaml.cs">
       <DependentUpon>Pomoc.xaml</DependentUpon>
     </Compile>
     <Compile Include="SqlDataAccess.cs" />
-    <Compile Include="Vracanje.xaml.cs">
+    <Compile Include="Windows\Vracanje.xaml.cs">
       <DependentUpon>Vracanje.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\Window1.xaml.cs">
-      <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
     <Page Include="Windows\BrisanjeClana.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BrisanjeKnjige.xaml">
+    <Page Include="Windows\BrisanjeKnjige.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DodajClana.xaml">
+    <Page Include="Windows\DodajClana.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DodajKnjigu.xaml">
+    <Page Include="Windows\DodajKnjigu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Izdavanje.xaml">
+    <Page Include="Windows\Izdavanje.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="IzdavanjeKnjiga.xaml">
+    <Page Include="Windows\IzdavanjeKnjiga.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ListaClanova.xaml">
+    <Page Include="Windows\ListaClanova.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Login.xaml">
+    <Page Include="Windows\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -186,32 +180,24 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DodajClana.xaml.cs">
+    <Compile Include="Windows\DodajClana.xaml.cs">
       <DependentUpon>DodajClana.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DodajKnjigu.xaml.cs">
+    <Compile Include="Windows\DodajKnjigu.xaml.cs">
       <DependentUpon>DodajKnjigu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Izdavanje.xaml.cs">
+    <Compile Include="Windows\Izdavanje.xaml.cs">
       <DependentUpon>Izdavanje.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Podesavanje.xaml">
+    <Page Include="Windows\Pomoc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pomoc.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Vracanje.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\Window1.xaml">
+    <Page Include="Windows\Vracanje.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

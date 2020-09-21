@@ -14,7 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace ISBiblioteka
+namespace ISBiblioteka.Windows
 {
     /// <summary>
     /// Interaction logic for ListaClanova.xaml
@@ -53,7 +53,7 @@ namespace ISBiblioteka
 
         private void Dugme_Obrisi_Click(object sender, RoutedEventArgs e)
         {
-            Windows.BrisanjeClana brisanjeClana = new Windows.BrisanjeClana();
+            BrisanjeClana brisanjeClana = new BrisanjeClana();
             brisanjeClana.ShowDialog();
 
         }

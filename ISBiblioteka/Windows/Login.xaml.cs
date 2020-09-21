@@ -14,7 +14,7 @@ using System.Windows.Shapes;
 using System.Data.SQLite;
 using System.Data;
 
-namespace ISBiblioteka
+namespace ISBiblioteka.Windows
 {
     /// <summary>
     /// Interaction logic for Login.xaml
