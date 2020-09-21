@@ -47,6 +47,10 @@ namespace ISBiblioteka.Windows
                 RoutedCommand fourthSettings = new RoutedCommand();
                 fourthSettings.InputGestures.Add(new KeyGesture(Key.O, ModifierKeys.Alt));
                 CommandBindings.Add(new CommandBinding(fourthSettings, Dugme_O_Click));
+
+                RoutedCommand fifthSettings = new RoutedCommand();
+                fifthSettings.InputGestures.Add(new KeyGesture(Key.Escape));
+                CommandBindings.Add(new CommandBinding(fifthSettings, Zatvori));
             }
             catch (Exception err)
             {
@@ -56,6 +60,10 @@ namespace ISBiblioteka.Windows
 
         private const string sHTMLHelpFileName = "isBiblioteka.chm";
 
+        private void Zatvori(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
         private void Dugme_GitHub_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/marioallacc24/ISBiblioteka");
