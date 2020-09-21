@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Data.SQLite;
 using System.Data;
+using System.Windows.Forms;
+using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace ISBiblioteka.Windows
 {
@@ -25,11 +27,30 @@ namespace ISBiblioteka.Windows
         {
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+            AddHotKeys();
+        }
+
+        private void AddHotKeys()
+        {
+            try
+            {
+                RoutedCommand firstSettings = new RoutedCommand();
+                firstSettings.InputGestures.Add(new KeyGesture(Key.Enter));
+                CommandBindings.Add(new CommandBinding(firstSettings, Dugme_Login_Click));
+
+                RoutedCommand secondSettings = new RoutedCommand();
+                secondSettings.InputGestures.Add(new KeyGesture(Key.Escape));
+                CommandBindings.Add(new CommandBinding(secondSettings, Dugme_Otkazi_Click));
+            }
+            catch (Exception err)
+            {
+                //handle exception error
+            }
         }
 
         private void Dugme_Login_Click(object sender, RoutedEventArgs e)
         {
-            
+           
 
             SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=db_ISBiblioteka.db;Version=3;");
             if (m_dbConnection.State == ConnectionState.Closed)
@@ -56,7 +77,7 @@ namespace ISBiblioteka.Windows
                 }
                 else
                 {
-                    MessageBox.Show("Pogresni podaci", "Greška", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    System.Windows.MessageBox.Show("Pogresni podaci", "Greška", MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
             }
             catch (Exception ex)
@@ -73,9 +94,13 @@ namespace ISBiblioteka.Windows
 
         private void Dugme_Otkazi_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.Application.Current.Shutdown();
+             System.Windows.Application.Current.Shutdown();
+            
+
+
         }
 
+     
     }
 
         
