@@ -22,6 +22,25 @@ namespace ISBiblioteka.Windows
         public IzdavanjeKnjiga()
         {
             InitializeComponent();
+            AddHotKeys();
+        }
+
+        private void AddHotKeys()
+        {
+            try
+            {
+                RoutedCommand firstSettings = new RoutedCommand();
+                firstSettings.InputGestures.Add(new KeyGesture(Key.Enter));
+                CommandBindings.Add(new CommandBinding(firstSettings, Dugme_Potvrdi_Click));
+
+                RoutedCommand secondSettings = new RoutedCommand();
+                secondSettings.InputGestures.Add(new KeyGesture(Key.Escape));
+                CommandBindings.Add(new CommandBinding(secondSettings, Dugme_Otkazi_Click));
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
 
         private void Dugme_Potvrdi_Click(object sender, RoutedEventArgs e)

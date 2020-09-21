@@ -25,6 +25,25 @@ namespace ISBiblioteka.Windows
         {
             InitializeComponent();
             UcitajClanove();
+            AddHotKeys();
+        }
+
+        private void AddHotKeys()
+        {
+            try
+            {
+                RoutedCommand firstSettings = new RoutedCommand();
+                firstSettings.InputGestures.Add(new KeyGesture(Key.Enter));
+                CommandBindings.Add(new CommandBinding(firstSettings, Dugme_Obrisi_Click));
+
+                RoutedCommand secondSettings = new RoutedCommand();
+                secondSettings.InputGestures.Add(new KeyGesture(Key.Escape));
+                CommandBindings.Add(new CommandBinding(secondSettings, Dugme_Otkazi_Click));
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
 
         private void Dugme_Otkazi_Click(object sender, RoutedEventArgs e)

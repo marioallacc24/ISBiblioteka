@@ -26,8 +26,26 @@ namespace ISBiblioteka.Windows
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             UcitajKnjige();
+            AddHotKeys();
 
+        }
 
+        private void AddHotKeys()
+        {
+            try
+            {
+                RoutedCommand firstSettings = new RoutedCommand();
+                firstSettings.InputGestures.Add(new KeyGesture(Key.Enter));
+                CommandBindings.Add(new CommandBinding(firstSettings, Dugme_Izdaj_Click));
+
+                RoutedCommand secondSettings = new RoutedCommand();
+                secondSettings.InputGestures.Add(new KeyGesture(Key.Escape));
+                CommandBindings.Add(new CommandBinding(secondSettings, Dugme_Otkazi_Click));
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
 
         private void Dugme_Otkazi_Click(object sender, RoutedEventArgs e)

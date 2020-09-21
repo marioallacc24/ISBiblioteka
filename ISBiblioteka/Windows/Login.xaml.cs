@@ -44,7 +44,7 @@ namespace ISBiblioteka.Windows
             }
             catch (Exception err)
             {
-                //handle exception error
+                MessageBox.Show(err.Message);
             }
         }
 
