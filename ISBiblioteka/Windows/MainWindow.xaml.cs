@@ -24,7 +24,50 @@ namespace ISBiblioteka.Windows
         {
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+            AddHotKeys();
             
+        }
+
+        private void AddHotKeys()
+        {
+            try
+            {
+                RoutedCommand firstSettings = new RoutedCommand();
+                firstSettings.InputGestures.Add(new KeyGesture(Key.K, ModifierKeys.Alt));
+                CommandBindings.Add(new CommandBinding(firstSettings, Dugme_DodajKnjigu_Click));
+
+                RoutedCommand secondSettings = new RoutedCommand();
+                secondSettings.InputGestures.Add(new KeyGesture(Key.C, ModifierKeys.Alt));
+                CommandBindings.Add(new CommandBinding(secondSettings, Dugme_DodajClana_Click));
+
+                RoutedCommand thirdSettings = new RoutedCommand();
+                thirdSettings.InputGestures.Add(new KeyGesture(Key.A, ModifierKeys.Alt));
+                CommandBindings.Add(new CommandBinding(thirdSettings, Dugme_AdminPanel_Click));
+
+                RoutedCommand fourthSettings = new RoutedCommand();
+                fourthSettings.InputGestures.Add(new KeyGesture(Key.I, ModifierKeys.Alt));
+                CommandBindings.Add(new CommandBinding(fourthSettings, Dugme_Izdavanje_Click));
+
+                RoutedCommand fifthSettings = new RoutedCommand();
+                fifthSettings.InputGestures.Add(new KeyGesture(Key.V, ModifierKeys.Alt));
+                CommandBindings.Add(new CommandBinding(fifthSettings, Dugme_Vracanje_Click));
+
+                RoutedCommand sixthSettings = new RoutedCommand();
+                sixthSettings.InputGestures.Add(new KeyGesture(Key.L, ModifierKeys.Alt));
+                CommandBindings.Add(new CommandBinding(sixthSettings, Dugme_ListaClanova_Click));
+
+                RoutedCommand seventhSettings = new RoutedCommand();
+                seventhSettings.InputGestures.Add(new KeyGesture(Key.P, ModifierKeys.Alt));
+                CommandBindings.Add(new CommandBinding(seventhSettings, Dugme_Pomoc_Click));
+
+                RoutedCommand eighthSettings = new RoutedCommand();
+                eighthSettings.InputGestures.Add(new KeyGesture(Key.Escape));
+                CommandBindings.Add(new CommandBinding(eighthSettings, Dugme_IzlogujSe_Click));
+            }
+            catch (Exception err)
+            {
+                System.Windows.MessageBox.Show(err.Message);
+            }
         }
 
         private void Dugme_Izlaz_OnClick(object sender, RoutedEventArgs e)

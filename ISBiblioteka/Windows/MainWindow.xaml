@@ -65,7 +65,7 @@
 
         </materialDesign:ColorZone>
 
-        <Button x:Name="Dugme_DodajKnjigu" Grid.Column="0" Grid.Row="1" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu" Height="Auto" Click="Dugme_DodajKnjigu_Click"  >
+        <Button x:Name="Dugme_DodajKnjigu" Grid.Column="0" Grid.Row="1" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj knjigu - Alt+K" Height="Auto" Click="Dugme_DodajKnjigu_Click"  >
             <StackPanel>
                 <materialDesign:PackIcon Kind="Book" Width="50" Height="50" HorizontalAlignment="Center"/>
                 <TextBlock FontSize="15" Style="{StaticResource MaterialDesignTitleTextBlock}">
@@ -74,7 +74,7 @@
             </StackPanel>
         </Button>
 
-        <Button x:Name="Dugme_DodajClana" Grid.Column="1" Grid.Row="1" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj člana" Height="Auto" Click="Dugme_DodajClana_Click">
+        <Button x:Name="Dugme_DodajClana" Grid.Column="1" Grid.Row="1" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj člana - Alt+C" Height="Auto" Click="Dugme_DodajClana_Click">
             <StackPanel>
                 <materialDesign:PackIcon Kind="PersonAddOutline" Width="50" Height="50" HorizontalAlignment="Center"/>
                 <TextBlock FontSize="15" Style="{StaticResource MaterialDesignTitleTextBlock}">
@@ -83,7 +83,7 @@
             </StackPanel>
         </Button>
 
-        <Button x:Name="Dugme_AdminPanel" Grid.Column="2" Grid.Row="1" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="U izradi" Height="Auto" Click="Dugme_AdminPanel_Click">
+        <Button x:Name="Dugme_AdminPanel" Grid.Column="2" Grid.Row="1" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="U izradi - Alt+A" Height="Auto" Click="Dugme_AdminPanel_Click">
             <StackPanel>
                 <materialDesign:PackIcon Kind="AccountStar" Width="50" Height="50" HorizontalAlignment="Center"/>
                 <TextBlock FontSize="15" Style="{StaticResource MaterialDesignTitleTextBlock}">
@@ -92,13 +92,13 @@
             </StackPanel>
         </Button>
 
-       
 
-        
 
-        
 
-        <Button x:Name="Dugme_Izdavanje" Grid.Column="0" Grid.Row="2" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Izdavanje" Height="Auto" Click="Dugme_Izdavanje_Click">
+
+
+
+        <Button x:Name="Dugme_Izdavanje" Grid.Column="0" Grid.Row="2" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Izdavanje - Alt+I" Height="Auto" Click="Dugme_Izdavanje_Click">
             <StackPanel>
                 <materialDesign:PackIcon Kind="UPload" Width="50" Height="50" HorizontalAlignment="Center"/>
                 <TextBlock FontSize="15" Style="{StaticResource MaterialDesignTitleTextBlock}">
@@ -107,7 +107,7 @@
             </StackPanel>
         </Button>
 
-        <Button x:Name="Dugme_Vracanje" Grid.Column="1" Grid.Row="2" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Vraćanje" Height="Auto" Click="Dugme_Vracanje_Click">
+        <Button x:Name="Dugme_Vracanje" Grid.Column="1" Grid.Row="2" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Vraćanje - Alt+V" Height="Auto" Click="Dugme_Vracanje_Click">
             <StackPanel>
                 <materialDesign:PackIcon Kind="Download" Width="50" Height="50" HorizontalAlignment="Center"/>
                 <TextBlock FontSize="15" Style="{StaticResource MaterialDesignTitleTextBlock}">
@@ -116,7 +116,7 @@
             </StackPanel>
         </Button>
 
-        <Button x:Name="Dugme_Pomoc" Grid.Column="0" Grid.Row="4" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Pomoć" Height="Auto" Click="Dugme_Pomoc_Click">
+        <Button x:Name="Dugme_Pomoc" Grid.Column="0" Grid.Row="4" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Pomoć - Alt+P" Height="Auto" Click="Dugme_Pomoc_Click">
             <StackPanel>
                 <materialDesign:PackIcon Kind="HelpOutline" Width="50" Height="50" HorizontalAlignment="Center"/>
                 <TextBlock FontSize="15" Style="{StaticResource MaterialDesignTitleTextBlock}">
@@ -125,7 +125,7 @@
             </StackPanel>
         </Button>
 
-        <Button x:Name="Dugme_ListaClanova" Grid.Column="2" Grid.Row="2"  Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Lista" Height="Auto" Click="Dugme_ListaClanova_Click" >
+        <Button x:Name="Dugme_ListaClanova" Grid.Column="2" Grid.Row="2"  Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Lista - Alt+L" Height="Auto" Click="Dugme_ListaClanova_Click" >
             <StackPanel>
                 <materialDesign:PackIcon Kind="Table" Width="50" Height="50" HorizontalAlignment="Center"/>
                 <TextBlock FontSize="15" Style="{StaticResource MaterialDesignTitleTextBlock}">
@@ -134,7 +134,7 @@
             </StackPanel>
         </Button>
 
-        <Button x:Name="Dugme_IzlogujSe" Grid.Column="2" Grid.Row="4"  Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Izloguj se" Height="Auto" Click="Dugme_IzlogujSe_Click">
+        <Button x:Name="Dugme_IzlogujSe" Grid.Column="2" Grid.Row="4"  Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Izloguj se - Escape" Height="Auto" Click="Dugme_IzlogujSe_Click">
             <StackPanel>
                 <materialDesign:PackIcon Kind="Logout" Width="50" Height="50" HorizontalAlignment="Center"/>
                 <TextBlock FontSize="15" Style="{StaticResource MaterialDesignTitleTextBlock}">
