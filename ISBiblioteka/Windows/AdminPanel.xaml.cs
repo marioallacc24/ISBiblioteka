@@ -22,13 +22,37 @@ namespace ISBiblioteka.Windows
         public AdminPanel()
         {
             InitializeComponent();
+            AddHotKeys();
+
         }
 
-        
+        private void AddHotKeys()
+        {
+            try
+            {
+                RoutedCommand firstSettings = new RoutedCommand();
+                firstSettings.InputGestures.Add(new KeyGesture(Key.B, ModifierKeys.Alt));
+                CommandBindings.Add(new CommandBinding(firstSettings, Dugme_DodajBibliotekara_Click));
+
+                RoutedCommand secondSettings = new RoutedCommand();
+                secondSettings.InputGestures.Add(new KeyGesture(Key.L, ModifierKeys.Alt));
+                CommandBindings.Add(new CommandBinding(secondSettings, Dugme_ListaBibliotekara_Click));
+
+                RoutedCommand eighthSettings = new RoutedCommand();
+                eighthSettings.InputGestures.Add(new KeyGesture(Key.Escape));
+                CommandBindings.Add(new CommandBinding(eighthSettings, Dugme_Izlaz_OnClick));
+            }
+            catch (Exception err)
+            {
+                System.Windows.MessageBox.Show(err.Message);
+            }
+        }
+
+
 
         private void Dugme_Izlaz_OnClick(object sender, RoutedEventArgs e)
         {
-            System.Windows.Application.Current.Shutdown();
+            Close();
         }
 
         public void Dugme_DodajBibliotekara_Click(object sender, RoutedEventArgs e)
