@@ -97,7 +97,19 @@ namespace ISBiblioteka.Windows
 
         private void Dugme_AdminPanel_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Panel je u izradi", "Obaveštenje",MessageBoxButton.OK, MessageBoxImage.Error);
+            if(Global.ulogovanKorisnik != "admin")
+            {
+                MessageBox.Show("Ovaj panel je samo za admina. Trenutni ulogovan korisnik: " + Global.ulogovanKorisnik.ToString(), "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Error);
+            } else
+            {
+                AdminPanel adminPanel = new AdminPanel();
+                adminPanel.WindowStartupLocation = System.Windows.WindowStartupLocation.Manual;
+                adminPanel.Left = Left + 60;
+                adminPanel.Top = Top + 60;
+                adminPanel.Show();
+            }
+
+            
         }
 
         private void Dugme_Izdavanje_Click(object sender, RoutedEventArgs e)

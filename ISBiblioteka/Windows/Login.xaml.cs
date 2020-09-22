@@ -70,6 +70,7 @@ namespace ISBiblioteka.Windows
 
                 if (count == 1)
                 {
+                    Global.ulogovanKorisnik = TextBox_Korisnik.Text;
                     MainWindow mainWindow = new MainWindow();
                     Close();
                     mainWindow.ShowDialog();
