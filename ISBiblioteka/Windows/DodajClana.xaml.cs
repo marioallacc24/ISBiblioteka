@@ -253,6 +253,7 @@ namespace ISBiblioteka.Windows
                 if (sql.CuvanjeClana(clan))
                 {
                     MessageBox.Show("Član je uspešno dodat", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Close();
                 }
                 else
                 {
@@ -288,6 +289,7 @@ namespace ISBiblioteka.Windows
                 if (sql.CuvanjeIzmeneClan(int.Parse(idClanTextBox.Text),clan))
                 {
                     MessageBox.Show("Član je uspešno izmenjen", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Close();
                 }
                 else
                 {

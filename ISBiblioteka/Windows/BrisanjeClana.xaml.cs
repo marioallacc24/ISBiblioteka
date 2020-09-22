@@ -77,6 +77,7 @@ namespace ISBiblioteka.Windows
                 if (sql.BrisanjeClana(int.Parse(idTextBox.Text)))
                 {
                     MessageBox.Show("Član je uspešno obrisan", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Close();
                 }
                 else
                 {

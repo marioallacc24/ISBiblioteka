@@ -56,12 +56,13 @@ namespace ISBiblioteka.Windows
             if (TestPolja())
             {
                 SqlDataAccess sql = new SqlDataAccess();
-                ;
+                
 
                 if(sql.BrisanjeZaduzenja(int.Parse(idZaduzenja.Text)) && sql.PromenaDugovanjaVratio(int.Parse(idZaduzenja.Text)))
                 {
 
                     MessageBox.Show("Knjiga je uspešno vraćenja", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+                    UcitajZaduzenja();
                 }
                 else
                 {

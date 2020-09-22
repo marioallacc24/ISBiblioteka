@@ -73,6 +73,7 @@ namespace ISBiblioteka.Windows
                 if (sql.BrisanjeKnjiga(int.Parse(idTextBox.Text)))
                 {
                     MessageBox.Show("Knjiga je uspešno obrisana", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Close();
                 }
                 else
                 {

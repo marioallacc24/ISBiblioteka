@@ -244,7 +244,7 @@ namespace ISBiblioteka.Windows
                 if (sql.CuvanjeKnjige(knjiga))
                 {
                     MessageBox.Show("Knjiga je uspesno dodata", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
-                    ResetFields();
+                    Close();
                 }
                 else
                 {
@@ -270,6 +270,7 @@ namespace ISBiblioteka.Windows
                 if (sql.CuvanjeIzmeneKnjiga(int.Parse(idTextBox.Text), knjiga))
                 {
                     MessageBox.Show("Knjiga je uspešno izmenjena", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Close();
                 }
                 else
                 {

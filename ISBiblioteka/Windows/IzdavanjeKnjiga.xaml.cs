@@ -55,6 +55,8 @@ namespace ISBiblioteka.Windows
                 {
                     
                     MessageBox.Show("Knjiga je uspešno izdata", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Close();
+                    
                 } else
                 {
                     MessageBox.Show("Pogrešni ID", "Obaveštenje", MessageBoxButton.OK, MessageBoxImage.Error);
