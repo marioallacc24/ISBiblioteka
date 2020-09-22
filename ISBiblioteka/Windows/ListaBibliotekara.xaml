@@ -3,10 +3,64 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ISBiblioteka.Windows"
+        xmlns:local="clr-namespace:ISBiblioteka"
         mc:Ignorable="d"
-        Title="ListaBibliotekara" Height="450" Width="800">
+        Title="Lista bibliotekara" Height="500" Width="200"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="7"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        MinWidth="400" MinHeight="500"
+        WindowStartupLocation="CenterScreen"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
+
+
+
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="150*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="127*"/>
+        </Grid.RowDefinitions>
+
+        <DataGrid x:Name="listaBibliotekaraDataGrid" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="11" CanUserSortColumns="True" CanUserAddRows="False" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="ID"  Binding="{Binding id}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Korisncko ime"  Binding="{Binding user}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Lozinka"  Binding="{Binding pass}"></DataGridTextColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+
+        <Button x:Name="Dugme_Obrisi" Grid.Row="11" Grid.Column="2" Style="{StaticResource MaterialDesignRaisedButton}" Width="100" ToolTip="Brisanje člana" Click="Dugme_Obrisi_Click">
+            OBRIŠI
+        </Button>
+        <Button x:Name="Dugme_Osvezi" Grid.Row="11" Grid.Column="1" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Osveži listu" Click="Dugme_Osvezi_Click">
+            OSVEŽI
+        </Button>
+        <Button x:Name="Dugme_Otkazi" Grid.Row="11" Grid.Column="0" Style="{StaticResource MaterialDesignRaisedLightButton}" Width="100" ToolTip="Otkaži" Click="Dugme_Otkazi_Click">
+            OTKAŽI
+        </Button>
+
     </Grid>
 </Window>

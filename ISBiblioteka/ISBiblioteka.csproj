@@ -121,6 +121,9 @@
     <Compile Include="Windows\AdminPanel.xaml.cs">
       <DependentUpon>AdminPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\BrisanjeBibliotekara.xaml.cs">
+      <DependentUpon>BrisanjeBibliotekara.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\BrisanjeClana.xaml.cs">
       <DependentUpon>BrisanjeClana.xaml</DependentUpon>
     </Compile>
@@ -155,6 +158,10 @@
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
     <Page Include="Windows\AdminPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\BrisanjeBibliotekara.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
