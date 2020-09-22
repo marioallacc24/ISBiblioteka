@@ -127,10 +127,16 @@
       <DependentUpon>BrisanjeKnjige.xaml</DependentUpon>
     </Compile>
     <Compile Include="Clan.cs" />
+    <Compile Include="Windows\DodajBibliotekara.xaml.cs">
+      <DependentUpon>DodajBibliotekara.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\IzdavanjeKnjiga.xaml.cs">
       <DependentUpon>IzdavanjeKnjiga.xaml</DependentUpon>
     </Compile>
     <Compile Include="Knjiga.cs" />
+    <Compile Include="Windows\ListaBibliotekara.xaml.cs">
+      <DependentUpon>ListaBibliotekara.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ListaClanova.xaml.cs">
       <DependentUpon>ListaClanova.xaml</DependentUpon>
     </Compile>
@@ -159,6 +165,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\DodajBibliotekara.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\DodajClana.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -172,6 +182,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\IzdavanjeKnjiga.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ListaBibliotekara.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -3,10 +3,91 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ISBiblioteka.Windows"
-        mc:Ignorable="d"
-        Title="AdminPanel" Height="450" Width="800">
-    <Grid>
         
+        xmlns:local="clr-namespace:ISBiblioteka"
+        mc:Ignorable="d"
+        Title="IS Educons Biblioteka!" Height="500" Width="690"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="7"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        MinWidth="690" MinHeight="500"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
+    <Grid ShowGridLines="False">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="330*"/>
+            <ColumnDefinition Width="330*"/>
+            <ColumnDefinition Width="330*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="187.5*"/>
+            <RowDefinition Height="187.5*"/>
+            <RowDefinition Height="187.5*"/>
+            <RowDefinition Height="187.5*"/>
+        </Grid.RowDefinitions>
+        
+        <materialDesign:ColorZone
+            Grid.ColumnSpan="3"
+  Mode="PrimaryDark"
+  Padding="10"
+  CornerRadius="5"
+  Margin="1">
+
+
+
+            <DockPanel>
+                <materialDesign:PopupBox DockPanel.Dock="Right" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Height="24" RenderTransformOrigin="0.529,0.067">
+                    <StackPanel>
+                        <Button x:Name="Dugme_TamnaTema" Content="Tamna tema" Click="Dugme_TamnaTema_Click"/>
+                        <Button x:Name="Dugme_SvetlaTema" Content="Svetla tema" Click="Dugme_SvetlaTema_Click"/>
+                
+                        <Separator/>
+                        <Button x:Name="Dugme_Izlaz" Content="Izlaz" Click="Dugme_Izlaz_OnClick"/>
+                    </StackPanel>
+                </materialDesign:PopupBox>
+                <StackPanel
+      Orientation="Horizontal" Height="18" Width="626">
+                    <TextBlock
+        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+        Margin="16 0 0 0" FontSize="15">
+      ADMIN PANEL
+                    </TextBlock>
+                </StackPanel>
+            </DockPanel>
+
+        </materialDesign:ColorZone>
+
+        <Button x:Name="Dugme_DodajBibliotekara" Grid.Column="0" Grid.Row="1" Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Dodaj bibliotekara - Alt+B" Height="Auto" Click="Dugme_DodajBibliotekara_Click">
+            <StackPanel>
+                <materialDesign:PackIcon Kind="PersonAddOutline" Width="50" Height="50" HorizontalAlignment="Center"/>
+                <TextBlock FontSize="15" Style="{StaticResource MaterialDesignTitleTextBlock}">
+                    Dodaj bibliotekara
+                </TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="Dugme_ListaBibliotekara" Grid.Column="1" Grid.Row="1"  Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Lista - Alt+L" Height="Auto" Click="Dugme_ListaBibliotekara_Click" >
+            <StackPanel>
+                <materialDesign:PackIcon Kind="Table" Width="50" Height="50" HorizontalAlignment="Center"/>
+                <TextBlock FontSize="15" Style="{StaticResource MaterialDesignTitleTextBlock}">
+                   Lista bibliotekara
+                </TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="Dugme_IzlogujSe" Grid.Column="2" Grid.Row="4"  Margin="15" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="Izloguj se - Escape" Height="Auto" Click="Dugme_IzlogujSe_Click">
+            <StackPanel>
+                <materialDesign:PackIcon Kind="Logout" Width="50" Height="50" HorizontalAlignment="Center"/>
+                <TextBlock FontSize="15" Style="{StaticResource MaterialDesignTitleTextBlock}">
+                    Izloguj se
+                </TextBlock>
+            </StackPanel>
+        </Button>
+
     </Grid>
 </Window>

@@ -23,5 +23,43 @@ namespace ISBiblioteka.Windows
         {
             InitializeComponent();
         }
+
+        
+
+        private void Dugme_Izlaz_OnClick(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
+
+        public void Dugme_DodajBibliotekara_Click(object sender, RoutedEventArgs e)
+        {
+            DodajBibliotekara dodajBibliotekara = new DodajBibliotekara();
+            dodajBibliotekara.Show();
+        }
+
+        private void Dugme_ListaBibliotekara_Click(object sender, RoutedEventArgs e)
+        {
+            ListaBibliotekara listaBibliotekara = new ListaBibliotekara();
+            listaBibliotekara.Show();
+
+        }
+
+        private void Dugme_IzlogujSe_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.Windows[0].Close();
+            Login login = new Login();
+            Close();
+            login.ShowDialog();
+        }
+
+        private void Dugme_SvetlaTema_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Resources.MergedDictionaries[1].Source = new Uri("pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml", UriKind.RelativeOrAbsolute);
+        }
+
+        private void Dugme_TamnaTema_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Resources.MergedDictionaries[1].Source = new Uri("pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Dark.xaml", UriKind.RelativeOrAbsolute);
+        }
     }
 }

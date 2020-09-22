@@ -75,11 +75,6 @@ namespace ISBiblioteka.Windows
             System.Windows.Application.Current.Shutdown();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Dugme_DodajKnjigu_Click(object sender, RoutedEventArgs e)
         {
             DodajKnjigu dodajKnjigu = new DodajKnjigu();
